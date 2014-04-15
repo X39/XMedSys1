@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ArmA3">
+	<Package name="X39_MedSys_var_Items">
+		<Container name="Weapons">
+			<Key ID="STR_X39_MedSys_var__Items_Weapons_Bandage">
+				<English>Bandage</English>
+				<French>Bandage</French>
+				<Russian>Бандаж</Russian>
+				<Polish>Bandaż</Polish>
+			</Key>
+			<Key ID="STR_X39_MedSys_var__Items_Morphine">
+				<English>Morphine</English>
+				<French>Morphine</French>
+				<Russian>Морфин</Russian>
+				<Polish>Morfina</Polish>
+			</Key>
+			<Key ID="STR_X39_MedSys_var__Items_Epinephrine">
+				<English>Epinephrine</English>
+				<French>Adrenaline</French>
+				<Russian>Андреналин</Russian>
+				<Polish>Adrenalina</Polish>
+			</Key>
+			<Key ID="STR_X39_MedSys_var__Items_Tourniquet">
+				<English>Tourniquet</English>
+				<French>Garrot</French>
+				<Russian>Жгут</Russian>
+				<Polish>Opaska uciskowa</Polish>
+			</Key>
+			<Key ID="STR_X39_MedSys_var__Items_BloodBag">
+				<English>Bloodbag</English>
+				<French>Poche de sang</French>
+				<Russian>Пакет с кровью</Russian>
+				<Polish>Krew</Polish>
+			</Key>
+			<Key ID="STR_X39_MedSys_var__Items_MediKit">
+				<English>Medikit</English>
+				<French>Kit de soins</French>
+				<Russian>Аптечка</Russian>
+				<Polish>Apteczka</Polish>
+			</Key>
+			<Key ID="STR_X39_MedSys_var__Items_Defibrillator">
+				<English>Defibrillator</English>
+				<French>Defibrillateur</French>
+				<Russian>Дефибриллятор</Russian>
+				<Polish>Defibrylator</Polish>
+			</Key>
+			<Key ID="STR_X39_MedSys_var__Items_EarPlug">
+				<English>Earplug</English>
+				<French>Boules quies</French>
+				<Russian>Беруши</Russian>
+			</Key>
+		</Container>
+		<Container name="Vehicles">
+			<Key ID="STR_X39_MedSys_var__Items_Vehicles_MedicalBox1">
+				<English>X39s MedSys MedicalBox</English>
+				<French>Trousse médicale</French>
+				<Polish>Skrzynka X39 MedSys</Polish>
+			</Key>
+			<Key ID="STR_X39_MedSys_var__Items_Vehicles_Backpacks_Medical">
+				<English>Medical Backpack</English>
+				<French>Sac de medecin</French>
+				<Russian>Медицинский рюкзак</Russian>
+				<Polish>Plecak medyczny</Polish>
+			</Key>
+		</Container>
+	</Package>
+</Project>
