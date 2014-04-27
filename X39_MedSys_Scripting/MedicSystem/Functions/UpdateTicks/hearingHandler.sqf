@@ -10,8 +10,10 @@ if(!isPlayer _this) exitWith { };
 if(!X39_MedSys_var_Hearing_enable) exitWith { };
 private["_hearing", "_hearingCALC"];
 //X39_MedSys_var_Settings_playEarRingingSound
-_hearing = (_this call X39_MedSys_fnc_getUnitHearing) ^ 4;
-_hearingCALC = 1 - _hearing;
+
+_hearing = (_this call X39_MedSys_fnc_getUnitHearing);
+_hearingCALC = (1 - _hearing) ^ 4;
+
 0.1 fadeMusic _hearingCALC;
 0.1 fadeSound _hearingCALC;
 0.1 fadeRadio _hearingCALC;
