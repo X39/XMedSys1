@@ -13,10 +13,6 @@ _hasEarplugs = _unit getVariable ["X39_MedSys_var_hasEarplugs", false];
 _hearingAbility = _unit getVariable ["X39_MedSys_var_Hearing", 0];
 if(_hasEarplugs) then
 {
-	_hearingAbility - X39_MedSys_var_Hearing_earPlugManipulationValue;
-};
-if(_hearingAbility < 0) then
-{
-	_hearingAbility = 0;
+	_hearingAbility = (1.0 - ((1.0 - _hearingAbility) * X39_MedSys_var_Hearing_earPlugManipulationValue));
 };
 _hearingAbility
