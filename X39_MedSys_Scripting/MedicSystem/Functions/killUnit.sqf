@@ -1,8 +1,8 @@
 #include "\X39_MedSys_Scripting\MedicSystem\default.hpp"
 /**
- *	N/A
+ *	kills the given unit (same like "OBJECT setDamage 1" but with other things happening like correcting stats etc.)
  *
- *	@ParamsCount - 1
+ *	@ParamsCount - 2
  *	@Param1 - OBJECT - N/A
  *	@Param1 - BOOL - N/A
  *	@Return - N/A
@@ -10,7 +10,7 @@
  */
 private["_unit", "_UnitDealtDamage", "_applyScoreChange"];
 _unit = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-_applyScoreChange = [_this, 0, true, [true]] call BIS_fnc_param;
+_applyScoreChange = [_this, 1, true, [true]] call BIS_fnc_param;
 if(isNull _unit) exitWith { diag_log "X39_MedSys_fnc_killUnit - no valid unit provided";};
 _UnitDealtDamage = _unit getVariable["X39_MedSys_var_LastHitter", objNull];
 _unit setDamage 1;
