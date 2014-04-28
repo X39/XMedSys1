@@ -17,6 +17,7 @@
  *	@Author - X39|Cpt. HM Murdock
  */
 if(dialog) exitWith{ call X39_ActionUI_fnc_closeDialog; };
+if !(alive player) exitWith {};
 if((player == vehicle player) && !(player call X39_MedSys_fnc_isUnitKnockedOut) && !X39_MedSys_var_PreventGuiOpening) then {
 private["_actions", "_tourniquetString", "_allowID"];
 _tourniquetString = player call {private["_res"];_res = "";if(_this getVariable ["X39_MedSys_var_Bleeding_hasTourniquet", false])then{_res = "STR_X39_MedSys_var__Option_RemoveTourniquet";}else{	_res = "STR_X39_MedSys_var__Option_PutTourniquet";}; _res};

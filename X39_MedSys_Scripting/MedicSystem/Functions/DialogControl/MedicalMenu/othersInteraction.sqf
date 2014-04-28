@@ -19,6 +19,7 @@
  *	@Author - X39|Cpt. HM Murdock
  */
 private["_otherUnit", "_tourniquetString", "_actions", "_allowID"];
+if !(alive player) exitWith {};
 if(dialog) exitWith{ call X39_ActionUI_fnc_closeDialog; };
 if((player == vehicle player) && !(player call X39_MedSys_fnc_isUnitKnockedOut) && !X39_MedSys_var_PreventGuiOpening) then {
 	_otherUnit = cursorTarget;
