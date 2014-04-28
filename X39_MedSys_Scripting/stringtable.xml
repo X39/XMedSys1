@@ -641,6 +641,14 @@
 				<Russian>слишком пострадал для реанимации!</Russian>
 				<Polish>zbyt ranny by go reanimować.</Polish>
 			</Key>
+			<Key ID="STR_X39_MedSys_var__msg_stop_crp">
+				<English>&lt;t color='#FF0000'&gt;Stop CRP&lt;/t&gt;</English>
+				<Russian>&lt;t color='#FF0000'&gt;Прекратить массаж&lt;/t&gt;</Russian>
+			</Key>
+			<Key ID="STR_X39_MedSys_var__msg_drop">
+				<English>&lt;t color='#FF0000'&gt;Drop&lt;/t&gt;</English>
+				<Russian>&lt;t color='#FF0000'&gt;Опустить&lt;/t&gt;</Russian>
+			</Key>
 		</Container>
 	</Package>
 </Project>
