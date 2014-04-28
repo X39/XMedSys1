@@ -16,10 +16,14 @@ _UnitDealtDamage = _unit getVariable["X39_MedSys_var_LastHitter", objNull];
 _unit setDamage 1;
 if(_applyScoreChange) then
 {
-	_unit addScore -1;
+	_unit addScore 1; // revert -1 score because setDamage
 	if(!isNull _UnitDealtDamage) then
-	{
-		_UnitDealtDamage addScore 1;
+	{	
+		if ([_unit call BIS_fnc_objectSide, _UnitDealtDamage call BIS_fnc_objectSide] call BIS_fnc_areFriendly)then {
+			_UnitDealtDamage addScore -1; // decrease score for friend kill
+		} else {
+			_UnitDealtDamage addScore 1; // increase score for enemy kill
+		};		
 	};
 };
 if(_unit getVariable ["X39_MedSys_var_UnitInitilized", false]) then
