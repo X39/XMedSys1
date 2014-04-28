@@ -13,6 +13,21 @@ _unit = [_this, 1, cursorTarget, [objNull]] call BIS_fnc_param;
 
 if(!isNull (player getVariable["X39_MedSys_var_DragCarry_OtherUnit", objNull])) exitWith  {[localize "STR_X39_MedSys_var__msg_DragCarry_InProgress"] call X39_MedSys_fnc_OutputMessageToPlayer;};
 if!(_unit call X39_MedSys_fnc_isUnitKnockedOut) exitWith {[localize "STR_X39_MedSys_var__msg_ThisMakesNoSense"] call X39_MedSys_fnc_OutputMessageToPlayer;};
+
+// copied from https://community.bistudio.com/wiki/selectWeapon
+// Desc: select default weapon & handle multiple muzzles
+if ((primaryWeapon player) != "") then {
+	private['_type', '_muzzles'];
+	 _type = primaryWeapon player;
+	// check for multiple muzzles (eg: GL)
+	_muzzles = getArray(configFile >> "cfgWeapons" >> _type >> "muzzles");
+	if (count _muzzles > 1) then {
+		player selectWeapon (_muzzles select 0);
+	} else {
+		player selectWeapon _type;
+	};
+};
+
 player playMove "AcinPknlMstpSrasWrflDnon";
 _unit attachTo [player];
 _unit setDir (direction _unit - 180);
