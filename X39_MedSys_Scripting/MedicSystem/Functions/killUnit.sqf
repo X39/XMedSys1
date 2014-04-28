@@ -12,7 +12,7 @@ private["_unit", "_UnitDealtDamage", "_applyScoreChange"];
 _unit = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _applyScoreChange = [_this, 0, true, [true]] call BIS_fnc_param;
 if(isNull _unit) exitWith { diag_log "X39_MedSys_fnc_killUnit - no valid unit provided";};
-_UnitDealtDamage = _unit setVariable["X39_MedSys_var_LastHitter", objNull];
+_UnitDealtDamage = _unit getVariable["X39_MedSys_var_LastHitter", objNull];
 _unit setDamage 1;
 if(_applyScoreChange) then
 {
