@@ -21,7 +21,7 @@ X39_MedSys_var_PreventGuiOpening = true;
 //_unit playMove "AinjPfalMstpSnonWrflDnon_carried_Up";
 player setVariable["X39_MedSys_var_loc_DragCarry_OtherUnit", _unit, false];
 player setVariable["X39_MedSys_var_loc_DragCarry_Action", 
-	player addAction["<t color='#FF0000'>Drop</t>", {
+	player addAction[localize "STR_X39_MedSys_var__msg_drop", {
 		X39_MedSys_var_PreventGuiOpening = false;
 		_unit = _this select 3;
 		player playMove "AcinPercMrunSrasWrflDf_AmovPercMstpSlowWrflDnon";

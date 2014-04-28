@@ -17,7 +17,7 @@ _unit setVariable["X39_MedSys_var_LifeTime_stop", true, true];
 player setVariable["X39_MedSys_var_loc_doCpr_inProgress", _unit, false];
 X39_MedSys_var_PreventGuiOpening = true;
 player setVariable["X39_MedSys_var_loc_doCpr_action", 
-	player addAction["<t color='#FF0000'>stop cpr</t>", {
+	player addAction[localize "STR_X39_MedSys_var__msg_stop_crp", {
 		X39_MedSys_var_PreventGuiOpening = false;
 		_unit = _this select 3;
 		_unit setVariable["X39_MedSys_var_LifeTime_stop", false, true];

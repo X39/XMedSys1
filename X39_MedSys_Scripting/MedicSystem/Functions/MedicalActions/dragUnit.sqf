@@ -19,7 +19,7 @@ _unit setDir (direction _unit - 180);
 _unit switchMove "AinjPpneMstpSnonWrflDb";
 player setVariable["X39_MedSys_var_DragCarry_OtherUnit", _unit, false];
 player setVariable["X39_MedSys_var_DragCarry_Action", 
-	player addAction["<t color='#FF0000'>Drop</t>", {
+	player addAction[localize "STR_X39_MedSys_var__msg_drop", {
 		_unit = _this select 3;
 		player playMove "AidlPknlMstpSrasWrflDnon_AI";
 		detach _unit;
