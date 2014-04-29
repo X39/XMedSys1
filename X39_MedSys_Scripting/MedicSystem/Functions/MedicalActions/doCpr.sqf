@@ -12,6 +12,7 @@ private["_animationIndex", "_unit"];
 _animationIndex = [_this, 0, 0, [0]] call BIS_fnc_param;
 _unit = [_this, 1, cursorTarget, [objNull]] call BIS_fnc_param;
 if(_unit call X39_MedSys_fnc_alive) exitWith {[localize "STR_X39_MedSys_var__msg_ThisMakesNoSense"] call X39_MedSys_fnc_OutputMessageToPlayer;};
+X39_MedSys_var_StartCRP = true;
 player playActionNow (_animationIndex call X39_MedSys_fnc_getMedicAnimation);
 _unit setVariable["X39_MedSys_var_LifeTime_stop", true, true];
 player setVariable["X39_MedSys_var_loc_doCpr_inProgress", _unit, false];
