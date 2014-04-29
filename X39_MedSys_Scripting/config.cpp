@@ -144,6 +144,7 @@ class CfgFunctions
 			class runTickThread:X39_XLib_Function_TypeA						{file = "\X39_MedSys_Scripting\MedicSystem\Functions\UpdateTicks\runTickThread.sqf";};
 			class registerNewTickHandler:X39_XLib_Function_TypeA			{file = "\X39_MedSys_Scripting\MedicSystem\Functions\UpdateTicks\registerNewTickHandler.sqf";};
 			class TH_bleedingHandler:X39_XLib_Function_TypeA				{file = "\X39_MedSys_Scripting\MedicSystem\Functions\UpdateTicks\bleedingHandler.sqf";};
+			class TH_walkingHandler:X39_XLib_Function_TypeA					{file = "\X39_MedSys_Scripting\MedicSystem\Functions\UpdateTicks\walkingHandler.sqf";};
 			class TH_tourniquetHandler:X39_XLib_Function_TypeA				{file = "\X39_MedSys_Scripting\MedicSystem\Functions\UpdateTicks\tourniquetHandler.sqf";};
 			class TH_painHandler:X39_XLib_Function_TypeA					{file = "\X39_MedSys_Scripting\MedicSystem\Functions\UpdateTicks\painHandler.sqf";};
 			class TH_HealthRegenOverTimeHandler:X39_XLib_Function_TypeA		{file = "\X39_MedSys_Scripting\MedicSystem\Functions\UpdateTicks\HealthRegenOverTimeHandler.sqf";};
