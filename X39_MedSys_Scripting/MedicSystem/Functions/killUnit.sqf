@@ -13,7 +13,6 @@ _unit = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _applyScoreChange = [_this, 0, true, [true]] call BIS_fnc_param;
 if(isNull _unit) exitWith { diag_log "X39_MedSys_fnc_killUnit - no valid unit provided";};
 _UnitDealtDamage = _unit getVariable["X39_MedSys_var_LastHitter", objNull];
-_unit setDamage 1;
 if(_applyScoreChange) then
 {
 	_unit addScore 1; // revert -1 score because setDamage
@@ -26,6 +25,7 @@ if(_applyScoreChange) then
 		};		
 	};
 };
+_unit setDamage 1;
 if(_unit getVariable ["X39_MedSys_var_UnitInitilized", false]) then
 {
 	[] call X39_MedSys_fnc_closeBlackOutDisplay;
