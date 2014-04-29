@@ -128,6 +128,8 @@ assignVariable_STR("X39_MedSys_var_Bleeding_StartBloodAtMinDamageValueX", 0.25)
 assignVariable_STR("X39_MedSys_var_Bleeding_KnockOutBloodLimit", X39_MedSys_var_Bleeding_StartingBlood * 0.2)
 assignVariable_STR("X39_MedSys_var_LifeTime", 600)
 assignVariable_STR("X39_MedSys_var_PreventGuiOpening", false)
+assignVariable_STR("X39_MedSys_var_StartCRP", false)
+
 
 assignVariable_STR("X39_MedSys_var_BandageBleedingHeal", 7)
 assignVariable_STR("X39_MedSys_var_BloodPackValue", X39_MedSys_var_Bleeding_StartingBlood * 0.25)
