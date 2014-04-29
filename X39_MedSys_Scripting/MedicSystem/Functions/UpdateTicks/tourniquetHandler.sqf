@@ -6,13 +6,7 @@
  *	@Return - N/A
  *	@Author - X39|Cpt. HM Murdock
  */
-
-_hasTourniquet = _this getVariable ["X39_MedSys_var_Bleeding_hasTourniquet", false];
-if(X39_MedSys_var_allowSpeedLimitations) then
-{
-	_this forceWalk _hasTourniquet;
-};
-
+ _hasTourniquet = _this getVariable ["X39_MedSys_var_Bleeding_hasTourniquet", false];
 if(X39_MedSys_var_allowSpeedLimitations && {_hasTourniquet}) then
 {
 	[_this, -1 * X39_MedSys_var_Bleeding_Tourniquet_DamagePerTick] call X39_MedSys_fnc_healUnit;

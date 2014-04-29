@@ -88,6 +88,7 @@ assignVariable_STR("X39_MedSys_var_TickRate", 0.25)
 assignVariable_STR("X39_MedSys_var_TickRateMaxTicks", 100)
 
 [X39_MedSys_fnc_TH_bleedingHandler]					call X39_MedSys_fnc_registerNewTickHandler;
+[X39_MedSys_fnc_TH_walkingHandler]					call X39_MedSys_fnc_registerNewTickHandler;
 [X39_MedSys_fnc_TH_tourniquetHandler, 4]			call X39_MedSys_fnc_registerNewTickHandler;
 [X39_MedSys_fnc_TH_painHandler]						call X39_MedSys_fnc_registerNewTickHandler;
 [X39_MedSys_fnc_TH_HealthRegenOverTimeHandler, 5]	call X39_MedSys_fnc_registerNewTickHandler;
@@ -148,7 +149,7 @@ assignVariable_STR("X39_MedSys_var_Display_Overlay_EnableBoodView", true)
 assignVariable_STR("X39_MedSys_var_Display_Overlay_EnableLegView", true)
 assignVariable_STR("X39_MedSys_var_Display_Overlay_EnableTourniquetView", true)
 assignVariable_STR("X39_MedSys_var_Display_Overlay_EnableMorphineView", true)
-assignVariable_STR("X39_MedSys_var_Bleeding_Tourniquet_DamagePerTick", 0.1)
+assignVariable_STR("X39_MedSys_var_Bleeding_Tourniquet_DamagePerTick", 0.001)
 assignVariable_STR("X39_MedSys_var_Force_CamShake", false)
 
 assignVariable_STR("X39_MedSys_var_Bleeding_Allow", true)
