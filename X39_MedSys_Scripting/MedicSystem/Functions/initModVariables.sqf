@@ -199,7 +199,7 @@ assignVariable_STR("X39_MedSys_var_Limitations_enable", false)
 assignVariable_STR("X39_MedSys_var_Hearing_enable", true)
 assignVariable_STR("X39_MedSys_var_Hearing_Multiplicator", 1)
 assignVariable_STR("X39_MedSys_var_Hearing_CureValue", -0.00001)
-assignVariable_STR("X39_MedSys_var_Hearing_earPlugManipulationValue", 0.2)
+assignVariable_STR("X39_MedSys_var_Hearing_earPlugManipulationValue", 0.6)
 
 assignVariable_STR("X39_MedSys_var_KillUnitWhenMaxDamageReached", false)
 assignVariable_STR("X39_MedSys_var_allowSpeedLimitations", true)

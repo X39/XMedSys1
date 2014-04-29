@@ -69,6 +69,7 @@ class CfgFunctions
 			class setUnitHearing:X39_XLib_Function_TypeA					{file = "\X39_MedSys_Scripting\MedicSystem\Functions\setUnitHearing.sqf";};
 			class addUnitHearing:X39_XLib_Function_TypeA					{file = "\X39_MedSys_Scripting\MedicSystem\Functions\addUnitHearing.sqf";};
 			
+			class dropUnit:X39_XLib_Function_TypeA							{file = "\X39_MedSys_Scripting\MedicSystem\Functions\dropUnit.sqf"};			
 		};
 		class HandleDamage
 		{
@@ -112,7 +113,7 @@ class CfgFunctions
 			class bandageUnit:X39_XLib_Function_TypeA						{file = "\X39_MedSys_Scripting\MedicSystem\Functions\MedicalActions\bandageUnit.sqf";};
 			class bloodUnit:X39_XLib_Function_TypeA							{file = "\X39_MedSys_Scripting\MedicSystem\Functions\MedicalActions\bloodUnit.sqf";};
 			class putTourniquet:X39_XLib_Function_TypeA						{file = "\X39_MedSys_Scripting\MedicSystem\Functions\MedicalActions\putTourniquet.sqf";};
-			class carryUnit:X39_XLib_Function_TypeA							{file = "\X39_MedSys_Scripting\MedicSystem\Functions\MedicalActions\carryUnit.sqf";};
+			class carryUnit:X39_XLib_Function_TypeA							{file = "\X39_MedSys_Scripting\MedicSystem\Functions\MedicalActions\carryUnit.sqf";};			
 			class checkUnitStatus:X39_XLib_Function_TypeA					{file = "\X39_MedSys_Scripting\MedicSystem\Functions\MedicalActions\checkUnitStatus.sqf";};
 			class defibrilatorUnit:X39_XLib_Function_TypeA					{file = "\X39_MedSys_Scripting\MedicSystem\Functions\MedicalActions\dephibrilatorUnit.sqf";};
 			class dragUnit:X39_XLib_Function_TypeA							{file = "\X39_MedSys_Scripting\MedicSystem\Functions\MedicalActions\dragUnit.sqf";};

@@ -26,7 +26,7 @@ X39_MedSys_var_MedicalMenu_PutUnitIntoVehicle_TempObjectsPlaceholder = nearestOb
 				true,																																																//enable
 				false,																																																//emptySpace
 				format["%1 %2 %3", localize "STR_X39_MedSys_var__VehiclePut_Put", name _x, localize "STR_X39_MedSys_var__VehiclePut_IntoVehicle"],																			//DisplayString
-				format["_res = [] spawn{[(X39_MedSys_var_MedicalMenu_PutUnitIntoVehicle_TempObjectsPlaceholder select %1), ""X39_MedSys_fnc_putUnitIntoVehicle"", (X39_MedSys_var_MedicalMenu_PutUnitIntoVehicle_TempObjectsPlaceholder select %1), false] call BIS_fnc_MP; cursorTarget call X39_MedSys_fnc_MM_putUnitIntoVehicle}", _forEachIndex]//ButtonAction
+				format["call X39_MedSys_fnc_dropUnit; _res = [] spawn{[(X39_MedSys_var_MedicalMenu_PutUnitIntoVehicle_TempObjectsPlaceholder select %1), ""X39_MedSys_fnc_putUnitIntoVehicle"", (X39_MedSys_var_MedicalMenu_PutUnitIntoVehicle_TempObjectsPlaceholder select %1), false] call BIS_fnc_MP; cursorTarget call X39_MedSys_fnc_MM_putUnitIntoVehicle}", _forEachIndex]//ButtonAction
 			]];
 		};
 	};
