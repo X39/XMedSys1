@@ -15,3 +15,5 @@
 *.ps
 *.pdn
 *.3ds
+/X39_MedSys_Ressources/texHeaders.bin
+/X39_MedSys_Stretcher/texHeaders.bin
