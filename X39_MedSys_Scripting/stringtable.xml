@@ -7,6 +7,7 @@
 				<German>Wiederbelebungs maßnahmen</German>
 				<French>Mesures de reanimation</French>
 				<Russian>Реанимация</Russian>
+				<Spanish>Medidas de renacimiento</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Header_MS_Menu">
 				<English>MedSys menu</English>
@@ -16,6 +17,7 @@
 				<French>Menu Medsys</French>
 				<Russian>Меню Medsys</Russian>
 				<Polish>Menu MedSys</Polish>
+				<Spanish>MedSys menu</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Header_Character_Interactions">
 				<English>Interactions</English>
@@ -25,6 +27,7 @@
 				<French>Interactions</French>
 				<Russian>Действия</Russian>
 				<Polish>Interakcje</Polish>
+				<Spanish>Interacciones</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Option_CloseUI">
 				<English>CLOSE</English>
@@ -33,6 +36,7 @@
 				<French>Fermer</French>
 				<Russian>Закрыть</Russian>
 				<Polish>Zamknij</Polish>
+				<Spanish>CERRAR</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Option_CheckSelf">
 				<English>Check self</English>
@@ -42,6 +46,7 @@
 				<French>Se checker</French>
 				<Russian>Осмотреть себя</Russian>
 				<Polish>Zbadaj siebie</Polish>
+				<Spanish>Ver Estado</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Option_CheckOther">
 				<English>Check</English>
@@ -51,6 +56,7 @@
 				<French>Checker</French>
 				<Russian>Осмотреть</Russian>
 				<Polish>Zbadaj</Polish>
+				<Spanish>Combrobar</Spanish>
 			</Key>
 			
 			<Key ID="STR_X39_MedSys_var__VehiclePull_Pull">
@@ -61,6 +67,7 @@
 				<French>Sortir</French>
 				<Russian>Достать</Russian>
 				<Polish>Wyciągnij</Polish>
+				<Spanish>Quitar</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__VehiclePull_OutOfVehicle">
 				<English>from vehicle</English>
@@ -70,6 +77,7 @@
 				<French>de ce vehicule</French>
 				<Russian>из техники</Russian>
 				<Polish>z pojazdu</Polish>
+				 <Spanish>de vehiculo</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__VehiclePut_Put">
 				<English>Put</English>
@@ -79,6 +87,7 @@
 				<French>Mettre</French>
 				<Russian>Положить</Russian>
 				<Polish>Umieść</Polish>
+				<Spanish>Poner</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__VehiclePut_IntoVehicle">
 				<English>into vehicle</English>
@@ -88,6 +97,7 @@
 				<French>dans ce vehicule</French>
 				<Russian>в технику</Russian>
 				<Polish>w pojeździe</Polish>
+				<Spanish>en el vehiculo</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__VehiclePut_NoVehicleInRange">
 				<English>There is no vehicle in range.</English>
@@ -97,6 +107,7 @@
 				<French>Il n'y a aucun vehicule autour de vous</French>
 				<Russian>Нет техники в радиусе</Russian>
 				<Polish>Brak pojazdu w zasięgu</Polish>
+				<Spanish>No hay vehiculo en el rango</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__VehiclePut_VehicleIsFull"> <!-- No use currently -->
 				<English>There is no space left inside of the vehicle</English>
@@ -106,6 +117,7 @@
 				<French>Il n'y a pas assez de place dans ce vehicule</French>
 				<Russian>Нет места в технике</Russian>
 				<Polish>Pojazd jest pełny</Polish>
+				<Spanish>No queda espacio en el vehiculo</Spanish>
 			</Key>
 			
 			<Key ID="STR_X39_MedSys_var__Option_Bandage">
@@ -116,6 +128,7 @@
 				<French>Bandage</French>
 				<Russian>Бандаж</Russian>
 				<Polish>Bandaż</Polish>
+				<Spanish>Bendas</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Option_PutTourniquet">
 				<English>Put Tourniquet</English>
@@ -125,6 +138,7 @@
 				<French>Mettre garrot</French>
 				<Russian>Наложить жгут</Russian>
 				<Polish>Załóż opaskę uciskową</Polish>
+				<Spanish>Poner Torniquete</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Option_RemoveTourniquet">
 				<English>Remove Tourniquet</English>
@@ -134,6 +148,7 @@
 				<French>Retirer le garrot</French>
 				<Russian>Снять жгут</Russian>
 				<Polish>Ściągnij opaskę</Polish>
+				<Spanish>Quitar Torniquete</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Option_Blood">
 				<English>Bloodbag</English>
@@ -143,6 +158,7 @@
 				<French>Poche de sang</French>
 				<Russian>Пакет с кровью</Russian>
 				<Polish>Transfuzja krwi</Polish>
+				<Spanish>Bolsa de sangre</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Option_Morphine">
 				<English>Morphine</English>
@@ -152,6 +168,7 @@
 				<French>Morphine</French>
 				<Russian>Морфин</Russian>
 				<Polish>Morfina</Polish>
+				<Spanish>Morfina</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Option_Epinephrine">
 				<English>Epinephrine</English>
@@ -160,12 +177,14 @@
 				<Italian>Adrenalina</Italian>
 				<French>Adrenaline</French>
 				<Russian>Адреналин</Russian>
+				<Spanish>Epinefrina</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Option_PutEarplugs">
 				<English>Put earplugs</English>
 				<German>Ohrstöpsel nutzen</German>
 				<Frenc>Mettre boules quies</French>
 				<Russian>Вставить беруши</Russian>
+				<Spanish>Poner Tapones</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Option_RemoveEarplugs">
 				<English>Remove earplugs</English>
@@ -173,6 +192,7 @@
 				<French>Retirer boules quies</French>
 				<Russian>Снять беруши</Russian>
 				<Polish>Adrenalina</Polish>
+				<Spanish>Quitar Tapones</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Option_Defibrillator">
 				<English>Defibrillator</English>
@@ -182,6 +202,7 @@
 				<French>Defibrilateur</French>
 				<Russian>Дефибриллятор</Russian>
 				<Polish>Defibrylator</Polish>
+				<Spanish>Desfibrilador</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Option_Medikit">
 				<English>MediKit</English>
@@ -191,6 +212,7 @@
 				<French>Kit de soins</French>
 				<Russian>Аптечка</Russian>
 				<Polish>Użyj apteczki</Polish>
+				<Spanish>KitMedico</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Interaction_Drag">
 				<English>Drag unit</English>
@@ -200,6 +222,7 @@
 				<French>Trainer blesse</French>
 				<Russian>Тащить</Russian>
 				<Polish>Ciągnij</Polish>
+				<Spanish>Arrastrar unidad</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Interaction_Carry">
 				<English>Carry unit</English>
@@ -209,6 +232,7 @@
 				<French>Porter blesse</French>
 				<Russian>Нести</Russian>
 				<Polish>Podnieś</Polish>
+				<Spanish>Llevar unidad</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Interaction_doCPR">
 				<English>Begin CPR</English>
@@ -217,6 +241,7 @@
 				<Italian>Iniziare massaggio cardiaco</Italian>
 				<French>Commencer RCP</French>
 				<Russian>Массаж сердца</Russian>
+				<Spanish>Comenzar CPR</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Interaction_doStabilize">
 				<English>Stabilize unit</English>
@@ -224,6 +249,7 @@
 				<French>Stabiliser la cible</French>
 				<Russian>Стабилизировать</Russian>
 				<Polish>Rozpocznij RKO</Polish>
+				<Spanish>Estabilizar unidad</Spanish>
 			</Key>
 		</Container>
 		<Container name="MedicalMessages">
@@ -235,6 +261,7 @@
 				<French>Sang restant</French>
 				<Russian>Крови осталось</Russian>
 				<Polish>Pozostało krwi</Polish>
+				<Spanish>No tienes sangre</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msgReal_HP">
 				<English>Health</English>
@@ -244,6 +271,7 @@
 				<French>Sante</French>
 				<Russian>Здоровье</Russian>
 				<Polish>Zdrowie</Polish>
+				<Spanish>Salud</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msgReal_Pain">
 				<English>Pain</English>
@@ -253,6 +281,7 @@
 				<French>Douleurs</French>
 				<Russian>Боль</Russian>
 				<Polish>Ból</Polish>
+				<Spanish>Dolor</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msgReal_LifeTime">
 				<English>Time left</English>
@@ -262,6 +291,7 @@
 				<French>Temps restant</French>
 				<Russian>Времени осталось</Russian>
 				<Polish>Pozostały czas</Polish>
+				<Spanish>Tiempo Restante</Spanish>
 			</Key>
 		
 			<Key ID="STR_X39_MedSys_var__msg_cprInProgress">
@@ -272,6 +302,7 @@
 				<French>Quelqu'un fait un RCP sur ce blesse</French>
 				<Russian>Кто-то уже делает массаж сердца</Russian>
 				<Polish>Ktoś już robi RKO tej osobie</Polish>
+				<Spanish>Ya se esta aplicando CPR en esta unidad</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_NoDefibrilator">
 				<English>You got no Defibrilator</English>
@@ -281,6 +312,7 @@
 				<French>Pas de defribilateur</French>
 				<Russian>У вас нет дефибриллятора</Russian>
 				<Polish>Nie masz defibrylatora</Polish>
+				<Spanish>No tienes desfibrilador</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_NoMediKitLeft">
 				<English>No MediKit left</English>
@@ -290,6 +322,7 @@
 				<French>Plus de kit de soins</French>
 				<Russian>Нет аптечки</Russian>
 				<Polish>Nie masz apteczki</Polish>
+				<Spanish>No tienes KitMedico</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_NoBandageLeft">
 				<English>No bandage left</English>
@@ -299,6 +332,7 @@
 				<French>Plus de bandage</French>
 				<Russian>Нет бандажа</Russian>
 				<Polish>Nie masz bandażu</Polish>
+				<Spanish>No tienes Bendas</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_NoEpiLeft">
 				<English>No epinephrine left</English>
@@ -308,6 +342,7 @@
 				<French>Plus d'adrenaline</French>
 				<Russian>Нет эпинефрина</Russian>
 				<Polish>Nie masz już adrenaliny</Polish>
+				<Spanish>No tienes epinefrina</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_TargetStillBleeding">
 				<English>Target is still bleeding!</English>
@@ -317,6 +352,7 @@
 				<French>La cible saigne encore</French>
 				<Russian>Все еще истекает кровью!</Russian>
 				<Polish>Pacjent dalej krwawi</Polish>
+				<Spanish>La unidad sigue sangrando</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_TargetIsNotKnockedOut">
 				<English>No reaction!</English>
@@ -326,6 +362,7 @@
 				<French>Aucunes reactions</French>
 				<Russian>Нет реакции!</Russian>
 				<Polish>Brak reakcji</Polish>
+				<Spanish>Ninguna reaccion</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_NoMorphineLeft">
 				<English>No morphine left</English>
@@ -335,6 +372,7 @@
 				<French>Plus de morphine</French>
 				<Russian>Нет морфина</Russian>
 				<Polish>Nie masz już morfiny</Polish>
+				<Spanish>No tienes Morfina</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_NoTourniquetLeft">
 				<English>No tourniquet left</English>
@@ -343,6 +381,7 @@
 				<Italian>Nessun laccio emostatico rimasto</Italian>
 				<French>Pas de garrot</French>
 				<Russian>Нет жгута</Russian>
+				<Spanish>No tienes torniquete</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_NoEarplugs">
 				<English>You got no earplugs</English>
@@ -350,6 +389,7 @@
 				<French>Vous n'avez pas de boules quies</French>
 				<Russian>У вас нет беруш</Russian>
 				<Polish>Nie masz opaski uciskowej</Polish>
+				<Spanish>No tienes tapones</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_Title_UnitReport">
 				<English>Unit report</English>
@@ -359,6 +399,7 @@
 				<French>Rapport medical</French>
 				<Russian>Результат осмотра</Russian>
 				<Polish>Stan pacjenta</Polish>
+				<Spanish>Informe de unidad</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_ThisMakesNoSense">
 				<English>This makes no sense!</English>
@@ -368,6 +409,7 @@
 				<French>Ca ne sert a rien</French>
 				<Russian>В этом нет смысла!</Russian>
 				<Polish>To nie ma sensu!</Polish>
+				<Spanish>Esto no tiene sentido</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_DragCarry_InProgress">
 				<English>You cant take two guys!</English>
@@ -377,6 +419,7 @@
 				<French>Vous ne pouvez pas porter deux blesses</French>
 				<Russian>Вы не можете нести двух человек!</Russian>
 				<Polish>Nie możesz ciągnąć dwóch osób!</Polish>
+				<Spanish>No puedes tomar dos unidades</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_NoBloodBagLeft">
 				<English>No bloodbag left</English>
@@ -386,6 +429,7 @@
 				<French>Pas de poche de sang</French>
 				<Russian>Нет пакета с кровью</Russian>
 				<Polish>Nie masz już krwi do transfuzji</Polish>
+				<Spanish>No tienes Bolsa sangre</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_bloodLeft_msg1">
 				<English>Blood presure is critical!</English>
@@ -395,6 +439,7 @@
 				<French>La pression sanguine est critique</French>
 				<Russian>Кровяное давление критическое</Russian>
 				<Polish>Ciśnienie krwi jest krytyczne</Polish>
+				<Spanish>La presion de sangre es critica</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_bloodLeft_msg2">
 				<English>Blood presure is not OK!</English>
@@ -404,6 +449,7 @@
 				<French>La pression sanguine est tres basse</French>
 				<Russian>Кровяное давление не в порядке</Russian>
 				<Polish>Ciśnienie krwi jest złe</Polish>
+				<Spanish>La presion de sangre no esta bien!</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_bloodLeft_msg3">
 				<English>Blood presure should be better</English>
@@ -413,6 +459,7 @@
 				<French>La pression sanguine est basse</French>
 				<Russian>Кровяное давление должно быть лучше</Russian>
 				<Polish>Ciśnienie krwi mogłoby być lepsze</Polish>
+				<Spanish>La presion de sangre debe ser mejor</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_bloodLeft_msg4">
 				<English>Blood presure seems to be OK</English>
@@ -422,6 +469,7 @@
 				<French>La pression sanguine est bonne</French>
 				<Russian>Кровяное давление в норме</Russian>
 				<Polish>Ciśnienie krwi jest dobre</Polish>
+				<Spanish>La presion de sangre debe estar bien</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_hurtReceived_msg1">
 				<English>Target is deadly hurt</English>
@@ -431,6 +479,7 @@
 				<French>La cible est extremement blesse</French>
 				<Russian>Смертельно ранен</Russian>
 				<Polish>Pacjent śmiertelnie ranny</Polish>
+				<Spanish>La unidad tiene una herida mortal</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_hurtReceived_msg2">
 				<English>Target is extremly hurt</English>
@@ -440,16 +489,17 @@
 				<French>La cible est gravement blesse </French>
 				<Russian>Сильно ранен</Russian>
 				<Polish>Pacjent ciężko ranny</Polish>
+				<Spanish>Unidad herida extremadamente</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_hurtReceived_msg3">
 				<English>Target is hurt</English>
 				<German>Der Soldat ist verwundet</German>
-
 				<Hungarian>Megsérült</Hungarian>
 				<Italian>Il paziente è ferito</Italian>
 				<French>La cible est blesse</French>
 				<Russian>Ранение средней тяжести</Russian>
 				<Polish>Pacjent ranny</Polish>
+				<Spanish>Unidad esta herida</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_hurtReceived_msg4">
 				<English>Target is lightly hurt</English>
@@ -459,6 +509,7 @@
 				<French>La cible est legerement blesse</French>
 				<Russian>Легкое ранение</Russian>
 				<Polish>Pacjent lekko ranny</Polish>
+				<Spanish>Unidad herida ligeramente</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_painReceived_msg1">
 				<English>Target is in extreme pain</English>
@@ -468,6 +519,7 @@
 				<French>La cible a extremement mal</French>
 				<Russian>Болевой шок</Russian>
 				<Polish>Pacjeny w wielkim bólu</Polish>
+				<Spanish>La unidad tiene un dolor extremo</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_painReceived_msg2">
 				<English>Target is in agony</English>
@@ -476,6 +528,7 @@
 				<French>La cible agonise</French>
 				<Russian>Агония</Russian>
 				<Polish>Pacjent w agonii</Polish>
+				<Spanish>La unidad esta en agonia</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_painReceived_msg3">
 				<English>Target is in pain</English>
@@ -485,6 +538,7 @@
 				<French>La cible a mal</French>
 				<Russian>Терпимая боль</Russian>
 				<Polish>Pacjent w bólu</Polish>
+				<Spanish>La unidad tiene dolor</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_painReceived_msg4">
 				<English>Target has light pain</English>
@@ -494,6 +548,7 @@
 				<French>La cible a un peu mal</French>
 				<Russian>Легкая боль</Russian>
 				<Polish>Pacjent w lekkim bólu</Polish>
+				<Spanish>Unidad tiene dolor leve</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_painReceivedNeg_msg1">
 				<English>Target is having extreme morphine overdose</English>
@@ -503,6 +558,7 @@
 				<French>Overdose de morphine dangereuse</French>
 				<Russian>Смертельная передозировка морфина</Russian>
 				<Polish>Pacjent ekstremalnie przedawkował morfinę</Polish>
+				<Spanish>Tiene extrema sobredosis de morfina</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_painReceivedNeg_msg2">
 				<English>Target is having high morphine overdose</English>
@@ -512,6 +568,7 @@
 				<French>Overdose importante de morphine!</French>
 				<Russian>Критическая передозировка морфина</Russian>
 				<Polish>Pacjent mocno przedawkował morfinę</Polish>
+				<Spanish>Tiene alta sobredosis de morfina</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_painReceivedNeg_msg3">
 				<English>Target is having morphine overdose</English>
@@ -521,6 +578,7 @@
 				<French>Overdose de morphine!</French>
 				<Russian>Передозировка морфина</Russian>
 				<Polish>Pacjent przedawkował morfinę</Polish>
+				<Spanish>Tiene alta sobredosis de morfina</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_painReceivedNeg_msg4">
 				<English>Target is having consumed to much morphine</English>
@@ -530,6 +588,7 @@
 				<French>La cible a recut trop de morphine</French>
 				<Russian>Высокая доза морфина</Russian>
 				<Polish>Pacjent ma za dużo morfiny</Polish>
+				<Spanish>Ha consumido mucha morfina</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_isBleeding">
 				<English>Target is bleeding</English>
@@ -539,6 +598,7 @@
 				<French>La cible saigne</French>
 				<Russian>Кровотечение</Russian>
 				<Polish>Pacjent krwawi</Polish>
+				<Spanish>Unidad Sangrando</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_legsBroken">
 				<English>Targets legs are broken</English>
@@ -548,6 +608,7 @@
 				<French>La cible a les jambes cassees</French>
 				<Russian>Ноги повреждены</Russian>
 				<Polish>Pacjent ma złamane nogi</Polish>
+				<Spanish>Tiene piernas rotas</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_knockedOut">
 				<English>Target is unresponsive</English>
@@ -557,6 +618,7 @@
 				<French>La cible est inconsciente</French>
 				<Russian>Без сознания</Russian>
 				<Polish>Pacjent nieprzytomny</Polish>
+				<Spanish>Unidad no responde</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_lifeTime_msg1">
 				<English>Pulse is irregular</English>
@@ -566,6 +628,7 @@
 				<French>Le pouls est irregulier</French>
 				<Russian>Пульс неровный</Russian>
 				<Polish>Tętno nieregularny</Polish>
+				<Spanish>El pulso es irregular</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_lifeTime_msg2">
 				<English>Pulse is pretty low</English>
@@ -575,6 +638,7 @@
 				<French>Le pouls est faible</French>
 				<Russian>Пульс слабый</Russian>
 				<Polish>Tętno słabe</Polish>
+				<Spanish>El pulso es bastante bajo</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_lifeTime_msg3">
 				<English>Pulse is nearly gone</English>
@@ -584,6 +648,7 @@
 				<French>Il n'y a presque plus de pouls</French>
 				<Russian>Пульс очень слабый</Russian>
 				<Polish>Tętno ledwo wyczuwalne</Polish>
+				<Spanish>El pulso casi ha desaparecido</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_lifeTime_msg4">
 				<English>No pulse</English>
@@ -593,6 +658,7 @@
 				<French>Pas de pouls</French>
 				<Russian>Нет пульса</Russian>
 				<Polish>Brak tętna</Polish>
+				<Spanish>No tine pulso</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_lifeTime_msg5">
 				<English>Dead ...</English>
@@ -602,6 +668,7 @@
 				<French>Mort...</French>
 				<Russian>Мертв ...</Russian>
 				<Polish>Martwy...</Polish>
+				<Spanish>Muerto...</Spanish>
 			</Key>
 			
 			<Key ID="STR_X39_MedSys_var__msg_CantSaveUnitInField">
@@ -612,6 +679,7 @@
 				<French>Vous ne pouvez plus rien pour lui!</French>
 				<Russian>Вы не можете спасти его в поле</Russian>
 				<Polish>Nie możesz go tutaj odratować!</Polish>
+				<Spanish>Usted no puede guardar esta alma en el campo!</Spanish>
 			</Key>
 			
 			<Key ID="STR_X39_MedSys_var__msg_StoppedBleeding">
@@ -622,6 +690,7 @@
 				<French>ne saigne plus</French>
 				<Russian>кровотечение остановлено!</Russian>
 				<Polish>przestał krwawić!</Polish>
+				<Spanish>Ha dejado de sangrar</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_StillBleeding">
 				<English>is still bleeding!</English>
@@ -631,6 +700,7 @@
 				<French>continue de saigner</French>
 				<Russian>кровотечение не остановлено!</Russian>
 				<Polish>ciągle krwawi!</Polish>
+				<Spanish>Todavia esta sangrando</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_tooDamagedToBeRevived">
 				<English>is too damaged to be revived!</English>
@@ -640,6 +710,7 @@
 				<French>est trop blesse pour etre reanime!</French>
 				<Russian>слишком пострадал для реанимации!</Russian>
 				<Polish>zbyt ranny by go reanimować.</Polish>
+				<Spanish>esta demasiado dañado para ser revivido</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__msg_stop_crp">
 				<English>&lt;t color='#FF0000'&gt;Stop CRP&lt;/t&gt;</English>
