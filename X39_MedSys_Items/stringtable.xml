@@ -7,47 +7,55 @@
 				<French>Bandage</French>
 				<Russian>Бандаж</Russian>
 				<Polish>Bandaż</Polish>
+				<Spanish>Bendas</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Items_Morphine">
 				<English>Morphine</English>
 				<French>Morphine</French>
 				<Russian>Морфин</Russian>
 				<Polish>Morfina</Polish>
+				<Spanish>Morfina</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Items_Epinephrine">
 				<English>Epinephrine</English>
 				<French>Adrenaline</French>
 				<Russian>Андреналин</Russian>
 				<Polish>Adrenalina</Polish>
+				<Spanish>Epinefrina</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Items_Tourniquet">
 				<English>Tourniquet</English>
 				<French>Garrot</French>
 				<Russian>Жгут</Russian>
 				<Polish>Opaska uciskowa</Polish>
+				<Spanish>Torniquete</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Items_BloodBag">
 				<English>Bloodbag</English>
 				<French>Poche de sang</French>
 				<Russian>Пакет с кровью</Russian>
 				<Polish>Krew</Polish>
+				<Spanish>Bolsa de Sangre</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Items_MediKit">
 				<English>Medikit</English>
 				<French>Kit de soins</French>
 				<Russian>Аптечка</Russian>
 				<Polish>Apteczka</Polish>
+				<Spanish>KitMedico</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Items_Defibrillator">
 				<English>Defibrillator</English>
 				<French>Defibrillateur</French>
 				<Russian>Дефибриллятор</Russian>
 				<Polish>Defibrylator</Polish>
+				<Spanish>Desfibrilador</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Items_EarPlug">
 				<English>Earplug</English>
 				<French>Boules quies</French>
 				<Russian>Беруши</Russian>
+				<Spanish>Tapones</Spanish>
 			</Key>
 		</Container>
 		<Container name="Vehicles">
@@ -55,12 +63,14 @@
 				<English>X39s MedSys MedicalBox</English>
 				<French>Trousse médicale</French>
 				<Polish>Skrzynka X39 MedSys</Polish>
+				<Spanish>X39s MedSys Bolsa Medica</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Items_Vehicles_Backpacks_Medical">
 				<English>Medical Backpack</English>
 				<French>Sac de medecin</French>
 				<Russian>Медицинский рюкзак</Russian>
 				<Polish>Plecak medyczny</Polish>
+				<Spanish>Mochila Medica</Spanish>
 			</Key>
 		</Container>
 	</Package>
