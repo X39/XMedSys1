@@ -30,7 +30,7 @@ class CfgFunctions
 			class module_BaseModule:X39_XLib_Function_TypeA					{file = "\X39_MedSys_Scripting\MedicSystem\Functions\ModuleFunctions\BaseModule.sqf";};
 			class module_AddLimitation:X39_XLib_Function_TypeA				{file = "\X39_MedSys_Scripting\MedicSystem\Functions\ModuleFunctions\AddLimitation.sqf";};
 			class module_EnableLimitationSystem:X39_XLib_Function_TypeA		{file = "\X39_MedSys_Scripting\MedicSystem\Functions\ModuleFunctions\EnableLimitationSystem.sqf";};
-		}
+		};
 		class Generic
 		{//
 			class initModVariables:X39_XLib_Function_TypeB					{file = "\X39_MedSys_Scripting\MedicSystem\Functions\initModVariables.sqf";};
