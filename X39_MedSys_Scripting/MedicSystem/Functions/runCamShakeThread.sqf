@@ -15,7 +15,7 @@ _res = [_this] spawn {
 	_unit = _this select 0;
 	_unitDamage = _unit call X39_MedSys_fnc_getUnitDamage;
 	while {alive _unit} do {
-		if(X39_MedSys_var_Settings_EnableCamShake || X39_MedSys_var_Force_CamShake) then
+		if(((profileNamespace getVariable ["X39_MedSys_var_Settings_EnableCamShake", X39_MedSys_var_Settings_EnableCamShake]) call X39_MedSys_fnc_IntToBoolean) || X39_MedSys_var_Force_CamShake) then
 		{
 			if(_unitDamage > X39_MedSys_var_Generic_DamageBeforePermaKnockOut) then
 			{

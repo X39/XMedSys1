@@ -32,10 +32,10 @@ else
 	displayControl IDC_MORPHINE_VIEW ctrlShow true;
 	if(_painWork > 0) then
 	{
-		displayControl _this ctrlSetTextColor[1, 0, 0, X39_MedSys_var_Settings_Overlay_Transparency * _painWork];
+		displayControl _this ctrlSetTextColor[1, 0, 0, profileNamespace getVariable ["X39_MedSys_var_Settings_Overlay_Transparency", X39_MedSys_var_Settings_Overlay_Transparency] * _painWork];
 	}
 	else
 	{
-		displayControl _this ctrlSetTextColor[0, 0, 1, X39_MedSys_var_Settings_Overlay_Transparency * (_painWork * -1)];
+		displayControl _this ctrlSetTextColor[0, 0, 1, profileNamespace getVariable ["X39_MedSys_var_Settings_Overlay_Transparency", X39_MedSys_var_Settings_Overlay_Transparency] * (_painWork * -1)];
 	};
 };

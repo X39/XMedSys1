@@ -9,7 +9,6 @@
 if(!isPlayer _this) exitWith { };
 if(!X39_MedSys_var_Hearing_enable) exitWith { };
 private["_hearing", "_hearingCALC"];
-//X39_MedSys_var_Settings_playEarRingingSound
 
 _hearing = (_this call X39_MedSys_fnc_getUnitHearing);
 _hearingCALC = (1 - _hearing) ^ 4;
@@ -20,7 +19,7 @@ _hearingCALC = (1 - _hearing) ^ 4;
 //TFAR related variable:
 //Global volume of radio and voice (level of ears health  ) [default value = 1.0]
 _this setVariable ["tf_globalVolume", _hearingCALC];
-if(X39_MedSys_var_Settings_playEarRingingSound && {_hearing > 0.5}) then
+if(((profileNamespace getVariable["X39_MedSys_var_Settings_playEarRingingSound", X39_MedSys_var_Settings_playEarRingingSound]) call X39_MedSys_fnc_IntToBoolean) && {_hearing > 0.5}) then
 {
 	playSound ["X39_Sounds_earRingingSoundLoop_1s", true];
 };

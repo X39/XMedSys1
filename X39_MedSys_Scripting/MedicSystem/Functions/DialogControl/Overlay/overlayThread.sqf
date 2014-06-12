@@ -13,7 +13,7 @@ _res = ([_this, 0, false, [true]] call BIS_fnc_param) spawn {
 	waitUntil{player getVariable["X39_MedSys_var_UnitInitilized", false]};
 	private["_update"];
 	_update = {
-		if(X39_MedSys_var_Display_Overlay_EnableHealthView && X39_MedSys_var_Display_Overlay_AllowHealthView) then
+		if(X39_MedSys_var_Display_Overlay_EnableHealthView && ((profileNamespace getVariable ["X39_MedSys_var_Display_Overlay_AllowHealthView", X39_MedSys_var_Display_Overlay_AllowHealthView])call X39_MedSys_fnc_IntToBoolean)) then
 		{
 			displayControl IDC_HEALTH_VIEW ctrlShow true;
 			IDC_HEALTH_VIEW call X39_MedSys_fnc_MedSysOverlay_controlFunctions_Health;
@@ -23,7 +23,7 @@ _res = ([_this, 0, false, [true]] call BIS_fnc_param) spawn {
 			displayControl IDC_HEALTH_VIEW ctrlShow false;
 		};
 		//----------------------------------------------------------------------------------
-		if(X39_MedSys_var_Display_Overlay_EnableBoodView && X39_MedSys_var_Display_Overlay_AllowBoodView) then
+		if(X39_MedSys_var_Display_Overlay_EnableBoodView && ((profileNamespace getVariable ["X39_MedSys_var_Display_Overlay_AllowBoodView", X39_MedSys_var_Display_Overlay_AllowBoodView])call X39_MedSys_fnc_IntToBoolean)) then
 		{
 			displayControl IDC_BLEEDING_VIEW ctrlShow true;
 			IDC_BLEEDING_VIEW call X39_MedSys_fnc_MedSysOverlay_controlFunctions_Bleeding;
@@ -33,7 +33,7 @@ _res = ([_this, 0, false, [true]] call BIS_fnc_param) spawn {
 			displayControl IDC_BLEEDING_VIEW ctrlShow false;
 		};
 		//----------------------------------------------------------------------------------
-		if(X39_MedSys_var_Display_Overlay_EnableLegView && X39_MedSys_var_Display_Overlay_AllowLegView) then
+		if(X39_MedSys_var_Display_Overlay_EnableLegView && ((profileNamespace getVariable ["X39_MedSys_var_Display_Overlay_AllowLegView", X39_MedSys_var_Display_Overlay_AllowLegView]) call X39_MedSys_fnc_IntToBoolean)) then
 		{
 			IDC_LEGS_VIEW call X39_MedSys_fnc_MedSysOverlay_controlFunctions_Leg;
 		}
@@ -42,7 +42,7 @@ _res = ([_this, 0, false, [true]] call BIS_fnc_param) spawn {
 			displayControl IDC_LEGS_VIEW ctrlShow false;
 		};
 		//----------------------------------------------------------------------------------
-		if(X39_MedSys_var_Display_Overlay_EnableTourniquetView && X39_MedSys_var_Display_Overlay_AllowTourniquetView) then
+		if(X39_MedSys_var_Display_Overlay_EnableTourniquetView && ((profileNamespace getVariable ["X39_MedSys_var_Display_Overlay_AllowTourniquetView", X39_MedSys_var_Display_Overlay_AllowTourniquetView]) call X39_MedSys_fnc_IntToBoolean)) then
 		{
 			IDC_TOURNIQUET_VIEW call X39_MedSys_fnc_MedSysOverlay_controlFunctions_Tourniquet;
 		}
@@ -51,7 +51,7 @@ _res = ([_this, 0, false, [true]] call BIS_fnc_param) spawn {
 			displayControl IDC_TOURNIQUET_VIEW ctrlShow false;
 		};
 		//----------------------------------------------------------------------------------
-		if(X39_MedSys_var_Display_Overlay_EnableMorphineView && X39_MedSys_var_Display_Overlay_AllowMorphineView) then
+		if(X39_MedSys_var_Display_Overlay_EnableMorphineView && ((profileNamespace getVariable ["X39_MedSys_var_Display_Overlay_AllowMorphineView", X39_MedSys_var_Display_Overlay_AllowMorphineView]) call X39_MedSys_fnc_IntToBoolean)) then
 		{
 			IDC_MORPHINE_VIEW call X39_MedSys_fnc_MedSysOverlay_controlFunctions_Morphine;
 		}
@@ -69,7 +69,7 @@ _res = ([_this, 0, false, [true]] call BIS_fnc_param) spawn {
 		while{missionNamespace getVariable "X39_MedSys_var_MedicalOverlay_running"} do
 		{
 			call _update;
-			sleep X39_MedSys_var_Settings_Overlay_RefreshRate;
+			sleep (profileNamespace getVariable ["X39_MedSys_var_Settings_Overlay_RefreshRate", X39_MedSys_var_Settings_Overlay_RefreshRate]);
 		};
 	};
 };

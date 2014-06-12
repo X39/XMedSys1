@@ -10,6 +10,7 @@
  *	@Return - boolean - returns true if Param1 >= 1. If input is invalid could be returned (or false its unexpected behaviour)!
  *	@Author - X39|Cpt. HM Murdock
  */
+if(typeName _this == "BOOL") exitWith {_this};
 _res = false;
 if(_this > 0) then
 {

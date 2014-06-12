@@ -13,6 +13,6 @@
 if(ctrlText (displayControl _this) != BROKENBONE) then
 {
 	displayControl _this ctrlSetText BROKENBONE;
-	displayControl _this ctrlSetTextColor[1, 1, 1, X39_MedSys_var_Settings_Overlay_Transparency];
+	displayControl _this ctrlSetTextColor[1, 1, 1, profileNamespace getVariable ["X39_MedSys_var_Settings_Overlay_Transparency", X39_MedSys_var_Settings_Overlay_Transparency]];
 };
 displayControl _this ctrlShow !(player call X39_MedSys_fnc_isUnitAbleToMove);

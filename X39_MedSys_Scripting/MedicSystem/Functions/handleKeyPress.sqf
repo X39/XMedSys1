@@ -12,36 +12,22 @@
  *	@Return - N/A
  *	@Author - X39|Cpt. HM Murdock
  */
- _i = 0;
- _handled = false;
- {
+_i = 0;
+_handled = false;
+{
 	scopeName "out";
-	_currentKey = X39_MedSys_var_Keys select _i select 0;
-	if(_currentKey select 0) then
-	{
-		_keys = actionKeys (_currentKey select 5);
-		{
-			scopeName "out2";
-			if(_this select 1 == _x) then {
-				_this call (X39_MedSys_var_Keys select _i select 1);
-				_handled = true;
-				breakOut "out2";
-			};
-		}forEach _keys;
-	}
-	else
-	{
-		if(_this select 1 == _currentKey select 1) then {
-			if(((_this select 2 && _currentKey select 2) || !(_currentKey select 2)) &&
-			   ((_this select 3 && _currentKey select 3) || !(_currentKey select 3)) &&
-			   ((_this select 4 && _currentKey select 4) || !(_currentKey select 4))) then {
-				_this call (X39_MedSys_var_Keys select _i select 1);
-				_handled = true;
-				breakOut "out";
-			};
+	_currentKey = profileNamespace getVariable [(X39_MedSys_var_Keys select _i select 0), (X39_MedSys_var_Keys select _i select 2)];
+	if(_this select 1 == _currentKey select 0) then {
+		if(( (_this select 2 && _currentKey select 1) || (!(_this select 2) && !(_currentKey select 1)) ) &&
+		   ( (_this select 3 && _currentKey select 2) || (!(_this select 3) && !(_currentKey select 2)) ) &&
+		   ( (_this select 4 && _currentKey select 3) || (!(_this select 4) && !(_currentKey select 3)) )) then {
+			_this call (X39_MedSys_var_Keys select _i select 1);
+			_handled = true;
+			breakOut "out";
 		};
 	};
 	//_scriptToCall = X39_MedSys_var_Keys select _i select 1;
 	_i = _i + 1;
- }count X39_MedSys_var_Keys;
- _handled
+	false
+}count X39_MedSys_var_Keys;
+_handled

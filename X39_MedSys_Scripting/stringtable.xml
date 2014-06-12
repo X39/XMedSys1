@@ -5,6 +5,7 @@
 			<Key ID="STR_X39_MedSys_var__ReviveTopMenu">
 				<English>Revival measures</English>
 				<German>Wiederbelebungs maßnahmen</German>
+				<Hungarian>Intázkedés</Hungarian>
 				<French>Mesures de reanimation</French>
 				<Russian>Реанимация</Russian>
 				<Spanish>Medidas de renacimiento</Spanish>
@@ -32,6 +33,7 @@
 			<Key ID="STR_X39_MedSys_var__Option_CloseUI">
 				<English>CLOSE</English>
 				<German>Schließen</German>
+				<Hungarian>Bezárás</Hungarian>
 				<Italian>CHIUDI</Italian>
 				<French>Fermer</French>
 				<Russian>Закрыть</Russian>
@@ -182,6 +184,7 @@
 			<Key ID="STR_X39_MedSys_var__Option_PutEarplugs">
 				<English>Put earplugs</English>
 				<German>Ohrstöpsel nutzen</German>
+				<Hungarian>Füldugó használata</Hungarian>
 				<Frenc>Mettre boules quies</French>
 				<Russian>Вставить беруши</Russian>
 				<Spanish>Poner Tapones</Spanish>
@@ -189,6 +192,7 @@
 			<Key ID="STR_X39_MedSys_var__Option_RemoveEarplugs">
 				<English>Remove earplugs</English>
 				<German>Ohrstöpsel entfernen</German>
+				<Hungarian>Füldugó eltávolítása</Hungarian>
 				<French>Retirer boules quies</French>
 				<Russian>Снять беруши</Russian>
 				<Polish>Adrenalina</Polish>
@@ -246,6 +250,7 @@
 			<Key ID="STR_X39_MedSys_var__Interaction_doStabilize">
 				<English>Stabilize unit</English>
 				<German>Einheit Stabilisieren</German>
+				<Hungarian>Stabilizálás</Hungarian>
 				<French>Stabiliser la cible</French>
 				<Russian>Стабилизировать</Russian>
 				<Polish>Rozpocznij RKO</Polish>
@@ -386,6 +391,7 @@
 			<Key ID="STR_X39_MedSys_var__msg_NoEarplugs">
 				<English>You got no earplugs</English>
 				<German>Du hast keine Ohrstöpsel</German>
+				<Hungarian>Nincs nálad füldugó</Hungarian>
 				<French>Vous n'avez pas de boules quies</French>
 				<Russian>У вас нет беруш</Russian>
 				<Polish>Nie masz opaski uciskowej</Polish>

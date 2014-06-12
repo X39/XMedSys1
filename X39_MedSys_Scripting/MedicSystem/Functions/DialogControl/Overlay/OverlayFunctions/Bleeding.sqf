@@ -14,25 +14,25 @@ _isBleeding = _getBleedingResult select 0;
 _bloodPercent = _getBleedingResult select 2;
 
 _bloodPercent = 1 / (X39_MedSys_var_Bleeding_StartingBlood / _bloodPercent);
-if(_bloodPercent <= X39_MedSys_var_Settings_Overlay_Blood_PictureValues select 4) then
+if(_bloodPercent <= (profileNamespace getVariable ["X39_MedSys_var_Settings_Overlay_Blood_PictureValues", X39_MedSys_var_Settings_Overlay_Blood_PictureValues]) select 4) then
 {
 	displayControl _this ctrlSetText BLOODDROP_5;
 }
 else
 {
-	if(_bloodPercent <= X39_MedSys_var_Settings_Overlay_Blood_PictureValues select 3) then
+	if(_bloodPercent <= (profileNamespace getVariable ["X39_MedSys_var_Settings_Overlay_Blood_PictureValues", X39_MedSys_var_Settings_Overlay_Blood_PictureValues]) select 3) then
 	{
 		displayControl _this ctrlSetText BLOODDROP_4;
 	}
 	else
 	{
-		if(_bloodPercent <= X39_MedSys_var_Settings_Overlay_Blood_PictureValues select 2) then
+		if(_bloodPercent <= (profileNamespace getVariable ["X39_MedSys_var_Settings_Overlay_Blood_PictureValues", X39_MedSys_var_Settings_Overlay_Blood_PictureValues]) select 2) then
 		{
 			displayControl _this ctrlSetText BLOODDROP_3;
 		}
 		else
 		{
-			if(_bloodPercent <= X39_MedSys_var_Settings_Overlay_Blood_PictureValues select 1) then
+			if(_bloodPercent <= (profileNamespace getVariable ["X39_MedSys_var_Settings_Overlay_Blood_PictureValues", X39_MedSys_var_Settings_Overlay_Blood_PictureValues]) select 1) then
 			{
 				displayControl _this ctrlSetText BLOODDROP_2;
 			}
@@ -45,9 +45,9 @@ else
 };
 if(_isBleeding) then
 {
-	displayControl _this ctrlSetTextColor[1, 0, 0, X39_MedSys_var_Settings_Overlay_Transparency];
+	displayControl _this ctrlSetTextColor[1, 0, 0, profileNamespace getVariable ["X39_MedSys_var_Settings_Overlay_Transparency", X39_MedSys_var_Settings_Overlay_Transparency]];
 }
 else
 {
-	displayControl _this ctrlSetTextColor[0, 1, 0, X39_MedSys_var_Settings_Overlay_Transparency];
+	displayControl _this ctrlSetTextColor[0, 1, 0, profileNamespace getVariable ["X39_MedSys_var_Settings_Overlay_Transparency", X39_MedSys_var_Settings_Overlay_Transparency]];
 };

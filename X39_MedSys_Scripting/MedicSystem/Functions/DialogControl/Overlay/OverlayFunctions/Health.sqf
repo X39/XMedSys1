@@ -22,4 +22,4 @@ if(ctrlText (displayControl _this) != REDCROSS_PAA) then
 {
 	displayControl _this ctrlSetText REDCROSS_PAA;
 };
-displayControl _this ctrlSetTextColor[_damageColorValue, 2 -_damageColorValue, 0, X39_MedSys_var_Settings_Overlay_Transparency];
+displayControl _this ctrlSetTextColor[_damageColorValue, 2 -_damageColorValue, 0, profileNamespace getVariable ["X39_MedSys_var_Settings_Overlay_Transparency", X39_MedSys_var_Settings_Overlay_Transparency]];

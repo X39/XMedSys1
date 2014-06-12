@@ -3,22 +3,20 @@ X39_MedSys_var_varNames = [];
 //Private helper functions
 //mainly used for a better overview
 
-_fnc_getKey = 
+_fnc_getKey =
 {
 	_keycode = getNumber (_this >> "key");
-	_bool1 = (getNumber (_this >> "press_ctrl")) call X39_MedSys_fnc_IntToBoolean;
-	_bool2 = (getNumber (_this >> "press_alt")) call X39_MedSys_fnc_IntToBoolean;
-	_bool3 = (getNumber (_this >> "press_shift")) call X39_MedSys_fnc_IntToBoolean;
-	_useActionKey = (getNumber (_this >> "useActionKey")) call X39_MedSys_fnc_IntToBoolean;
-	_actionKey = getText (_this >> "actionKey");
-	[_useActionKey, _keycode, _bool1, _bool2, _bool3, _actionKey]
+	_bool1 = (getNumber (_this >> "press_ctrl")) call X39_XLib_fnc_IntToBool;
+	_bool3 = (getNumber (_this >> "press_shift")) call X39_XLib_fnc_IntToBool;
+	_bool2 = (getNumber (_this >> "press_alt")) call X39_XLib_fnc_IntToBool;
+	[_keycode, _bool1, _bool2, _bool3]
 };
 
 //Settings
 _Keys = (configFile >> "CfgSettings" >> "X39" >> "x39_settings" >> "keys");
 _X39_MedSys_var_Key_SelfInteraction = (_Keys >> "key1") call _fnc_getKey;
 _X39_MedSys_var_Key_OthersInteraction = (_Keys >> "key2") call _fnc_getKey;
-_arr = [[_X39_MedSys_var_Key_SelfInteraction, X39_MedSys_fnc_SelfInteraction], [_X39_MedSys_var_Key_OthersInteraction, X39_MedSys_fnc_OthersInteraction]];
+_arr = [["X39_MedSys_var_Internal_Key1", X39_MedSys_fnc_SelfInteraction, _X39_MedSys_var_Key_SelfInteraction], ["X39_MedSys_var_Internal_Key2", X39_MedSys_fnc_OthersInteraction, _X39_MedSys_var_Key_OthersInteraction]];
 assignVariable_STR("X39_MedSys_var_Keys", _arr)
 _transparency = getNumber (configFile >> "CfgSettings" >> "X39" >> "x39_settings" >> "overlay" >> "transparency");
 assignVariable_STR("X39_MedSys_var_Settings_Overlay_Transparency", _transparency)
@@ -239,7 +237,7 @@ assignVariable_STR("X39_MedSys_var_actionTimeout_PutTourniquet", 4)
 
 
 _res = [] spawn {
-	if(getNumber (configFile >> "CfgSettings" >> "X39" >> "x39_settings" >> "general" >> "enableOnAllMissions") >= 1) then
+	if((profileNamespace getVariable["X39_MedSys_var_enableOnAllMissions", getNumber (configFile >> "CfgSettings" >> "X39" >> "x39_settings" >> "general" >> "enableOnAllMissions")]) >= 1) then
 	{
 		[] call X39_MedSys_fnc_initMod;
 	};
