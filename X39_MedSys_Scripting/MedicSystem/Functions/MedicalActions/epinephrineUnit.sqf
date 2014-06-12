@@ -17,7 +17,7 @@ _isBleeding = (_unit call X39_MedSys_fnc_getPlayerBleeding) select 0;
 _unitDamage = damage _unit;
 player playActionNow (_animationIndex call X39_MedSys_fnc_getMedicAnimation);
 X39_MedSys_var_PreventGuiOpening = true;
-sleep 1;
+sleep X39_MedSys_var_actionTimeout_EpinephrineUnit;
 player playAction "medicStop";
 X39_MedSys_var_PreventGuiOpening = false;
 if(!_isBleeding && (_unit call X39_MedSys_fnc_alive)) then

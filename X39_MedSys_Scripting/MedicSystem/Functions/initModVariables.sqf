@@ -202,7 +202,7 @@ assignVariable_STR("X39_MedSys_var_Limitations_enable", false)
 assignVariable_STR("X39_MedSys_var_Hearing_enable", true)
 assignVariable_STR("X39_MedSys_var_Hearing_Multiplicator", 1)
 assignVariable_STR("X39_MedSys_var_Hearing_CureValue", -0.00001)
-assignVariable_STR("X39_MedSys_var_Hearing_earPlugManipulationValue", 0.2)
+assignVariable_STR("X39_MedSys_var_Hearing_earPlugManipulationValue", 0.8)
 
 assignVariable_STR("X39_MedSys_var_KillUnitWhenMaxDamageReached", false)
 assignVariable_STR("X39_MedSys_var_allowSpeedLimitations", true)
@@ -211,6 +211,17 @@ assignVariable_STR("X39_MedSys_var_allowSpeedLimitations_forceWalkAtXDamage", 3)
 
 assignVariable_STR("X39_MedSys_var_enableDrag", true)
 assignVariable_STR("X39_MedSys_var_enableCarry", true)
+
+
+assignVariable_STR("X39_MedSys_var_actionTimeout_MorphineUnit", 1)
+assignVariable_STR("X39_MedSys_var_actionTimeout_EpinephrineUnit", 1)
+assignVariable_STR("X39_MedSys_var_actionTimeout_DephibrilateUnit", 7)
+assignVariable_STR("X39_MedSys_var_actionTimeout_CheckUnitStatus", 1)
+assignVariable_STR("X39_MedSys_var_actionTimeout_BloodUnit", 5)
+assignVariable_STR("X39_MedSys_var_actionTimeout_BandageUnit", 3)
+assignVariable_STR("X39_MedSys_var_actionTimeout_UseMedkitOnUnit", 5)
+assignVariable_STR("X39_MedSys_var_actionTimeout_Stabilize", 20)
+assignVariable_STR("X39_MedSys_var_actionTimeout_PutTourniquet", 4)
 
 
 
@@ -237,4 +248,4 @@ _res = [] spawn {
 		[] call X39_MedSys_fnc_applyServerConfig;
 	};
 };
-X39_MedSys_var_VERSION = "0.3.5";
+X39_MedSys_var_VERSION = "0.3.7";

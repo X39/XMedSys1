@@ -28,7 +28,7 @@ if(items player find ITEMSTRING(4) >= 0 || items _unit find ITEMSTRING(4) >= 0) 
 if(typeName _item == "BOOL") exitWith{[localize "STR_X39_MedSys_var__msg_NoMediKitLeft"] call X39_MedSys_fnc_OutputMessageToPlayer;};
 player playActionNow (_animationIndex call X39_MedSys_fnc_getMedicAnimation);
 X39_MedSys_var_PreventGuiOpening = true;
-sleep 1;
+sleep X39_MedSys_var_actionTimeout_UseMedkitOnUnit;
 X39_MedSys_var_PreventGuiOpening = false;
 player playAction "medicStop";
 if(X39_MedSys_var_Limitations_allowHealingLegsInField && _allowedID != ALLOWED_LIMITED) then

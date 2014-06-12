@@ -18,7 +18,7 @@ if(items player find ITEMSTRING < 0 && items _unit find ITEMSTRING < 0 && !_unit
 
 player playActionNow (_animationIndex call X39_MedSys_fnc_getMedicAnimation);
 X39_MedSys_var_PreventGuiOpening = true;
-sleep 4;
+sleep X39_MedSys_var_actionTimeout_PutTourniquet;
 X39_MedSys_var_PreventGuiOpening = false;
 player playAction "medicStop";
 

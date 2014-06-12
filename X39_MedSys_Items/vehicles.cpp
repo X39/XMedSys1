@@ -3,8 +3,14 @@ class x39_medicBox: NATO_Box_Base {
 	scope = 2;
 	vehicleClass = "Ammo";
 	displayName = $STR_X39_MedSys_var__Items_Vehicles_MedicalBox1;
-	model = "\A3\weapons_F\AmmoBoxes\AmmoBox_F";
-	icon = "iconCrateWpns";
+	hiddenSelectionsTextures[] = {"X39_MedSys_Ressources\X39\Mods\MedSys\Overlays\MedicBox_HiddenSelectionTexture.paa","A3\Weapons_F\Ammoboxes\data\AmmoBox_CO.paa"};
+	model = "\A3\weapons_F\AmmoBoxes\WpnsBox_large_F";
+	icon = "iconCrateLarge";
+	mapSize = 2.34;
+	transportMaxMagazines = 10000;
+	transportMaxWeapons = 10000;
+	transportMaxBackpacks = 10000;
+	maximumLoad = 200000;
 	class TransportMagazines{};
 	class TransportWeapons{};
 	class TransportItems {

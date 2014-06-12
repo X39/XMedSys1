@@ -18,7 +18,7 @@ if(items player find ITEMSTRING < 0 && items _unit find ITEMSTRING < 0) exitWith
 player playActionNow (_animationIndex call X39_MedSys_fnc_getMedicAnimation);
 _isBleeding = (_unit call X39_MedSys_fnc_getPlayerBleeding) select 0;
 X39_MedSys_var_PreventGuiOpening = true;
-sleep 7;
+sleep X39_MedSys_var_actionTimeout_DephibrilateUnit;
 X39_MedSys_var_PreventGuiOpening = false;
 if(!(_unit call X39_MedSys_fnc_alive)) then
 {

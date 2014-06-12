@@ -8,7 +8,8 @@
 //};
 
 
-class x39_medicSystemItemInfo : ItemCore{
+class x39_medicSystemItemInfo : ItemCore
+{
 	scope = 0;
 };
 
@@ -16,6 +17,7 @@ class x39_bandage : x39_medicSystemItemInfo
 {
 	scope = 2;
 	displayName = $STR_X39_MedSys_var__Items_Weapons_Bandage;
+	model = "\X39_MedSys_Ressources\X39\Mods\MedSys\Models\Bandage\Bandage.p3d";
 	class ItemInfo
     {
 		mass = 2;
@@ -35,7 +37,7 @@ class x39_morphine : x39_medicSystemItemInfo
     }; 
 	picture = "\X39_MedSys_Ressources\X39\Mods\MedSys\images\morphine.paa";
 	descriptionShort = "";
-	model = "\X39_MedSys_Ressources\X39\Mods\MedSys\Models\morphin\Morphi.p3d";
+	model = "\X39_MedSys_Ressources\X39\Mods\MedSys\Models\Injector\Injector.p3d";
 };
 class x39_epinephrine : x39_medicSystemItemInfo
 {
@@ -48,7 +50,7 @@ class x39_epinephrine : x39_medicSystemItemInfo
     }; 
 	picture = "\X39_MedSys_Ressources\X39\Mods\MedSys\images\epinephrine.paa";
 	descriptionShort = "";
-	model = "\X39_MedSys_Ressources\X39\Mods\MedSys\Models\epipen\epipen.p3d";
+	model = "\X39_MedSys_Ressources\X39\Mods\MedSys\Models\Injector\InjectorInv.p3d";
 };
 class x39_tourniquet : x39_medicSystemItemInfo
 {
