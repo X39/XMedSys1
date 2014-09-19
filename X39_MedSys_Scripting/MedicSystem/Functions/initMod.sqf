@@ -8,9 +8,10 @@ waitUntil{alive player};
 diag_log "DUMP before handling";
 DUMP_XMEDSYS_UNIT(player)
 
-_res = [] spawn X39_MedSys_fnc_AddEH_KeyDown;
+//_res = [] spawn X39_MedSys_fnc_AddEH_KeyDown;
 _res = [] spawn X39_MedSys_fnc_initializePlayer;
 [] call X39_MedSys_fnc_MedSysOverlayCreateDisplay;
 
 diag_log "DUMP after handling";
 DUMP_XMEDSYS_UNIT(player)
+X39_MedSys_var_Running = true;

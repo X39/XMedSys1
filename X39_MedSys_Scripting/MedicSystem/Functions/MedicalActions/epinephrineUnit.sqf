@@ -11,15 +11,15 @@
 #define ITEMSTRING "x39_epinephrine"
 _animationIndex = [_this, 0, 0, [0]] call BIS_fnc_param;
 _unit = [_this, 1, cursorTarget, [objNull]] call BIS_fnc_param;
-call X39_ActionUI_fnc_closeDialog;
+[] call X39_XLib_fnc_ActionDialog_closeDialog;
 if(items player find ITEMSTRING < 0 && items _unit find ITEMSTRING < 0) exitWith{[localize "STR_X39_MedSys_var__msg_NoEpiLeft"] call X39_MedSys_fnc_OutputMessageToPlayer;};
 _isBleeding = (_unit call X39_MedSys_fnc_getPlayerBleeding) select 0;
 _unitDamage = damage _unit;
 player playActionNow (_animationIndex call X39_MedSys_fnc_getMedicAnimation);
-X39_MedSys_var_PreventGuiOpening = true;
+X39_XLib_var_ActionDialog_preventMenuOpening = true;
 sleep X39_MedSys_var_actionTimeout_EpinephrineUnit;
 player playAction "medicStop";
-X39_MedSys_var_PreventGuiOpening = false;
+X39_XLib_var_ActionDialog_preventMenuOpening = false;
 if(!_isBleeding && (_unit call X39_MedSys_fnc_alive)) then
 {
 	[_unit, false] call X39_MedSys_fnc_knockOutUnit;

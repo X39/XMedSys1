@@ -27,6 +27,10 @@ if(!(_unit getVariable["X39_MedSys_var_UnitInitilized", false]) || _forceInit) t
 	_unit setVariable["X39_MedSys_var_Pain", 0, true];
 	_unit setVariable["X39_MedSys_var_Hearing", 0, true];
 	_unit setVariable["X39_MedSys_var_hasEarplugs", false, true];
+	if(!isNil "AGM_Interaction_fnc_addInteraction") then
+	{
+		_unit setVariable["X39_MedSys_var_hasEarplugs", false, true];
+	};
 	
 	
 	//local variables

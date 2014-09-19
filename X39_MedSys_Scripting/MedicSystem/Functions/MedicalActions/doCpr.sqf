@@ -16,10 +16,10 @@ X39_MedSys_var_StartCRP = true;
 player playActionNow (_animationIndex call X39_MedSys_fnc_getMedicAnimation);
 _unit setVariable["X39_MedSys_var_LifeTime_stop", true, true];
 player setVariable["X39_MedSys_var_loc_doCpr_inProgress", _unit, false];
-X39_MedSys_var_PreventGuiOpening = true;
+X39_XLib_var_ActionDialog_preventMenuOpening = true;
 player setVariable["X39_MedSys_var_loc_doCpr_action", 
 	player addAction[localize "STR_X39_MedSys_var__msg_stop_crp", {
-		X39_MedSys_var_PreventGuiOpening = false;
+		X39_XLib_var_ActionDialog_preventMenuOpening = false;
 		_unit = _this select 3;
 		_unit setVariable["X39_MedSys_var_LifeTime_stop", false, true];
 		player playAction "medicStop";
@@ -27,7 +27,7 @@ player setVariable["X39_MedSys_var_loc_doCpr_action",
 		player setVariable["X39_MedSys_var_loc_doCpr_action", -1, false];
 		player setVariable["X39_MedSys_var_loc_doCpr_inProgress", objNull, false];
 	}, _unit, 6, false, true], false];
-call X39_ActionUI_fnc_closeDialog;
+[] call X39_XLib_fnc_ActionDialog_closeDialog;
 /*
 player playMove "AcinPknlMstpSrasWrflDnon_AcinPercMrunSrasWrflDnon";
 _unit attachTo [player, [-0.5,-0.3,0]];

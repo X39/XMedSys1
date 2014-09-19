@@ -17,12 +17,12 @@ _allowedID = [_this, 2, -1, [0]] call BIS_fnc_param;
 if(!X39_MedSys_var_Limitations_allowBloodTransfusionInField && _allowedID == ALLOWED_LIMITED) exitWith { [localize "STR_X39_MedSys_var__msg_CantSaveUnitInField"] call X39_MedSys_fnc_OutputMessageToPlayer; };
 
 _blood = _unit getVariable ["X39_MedSys_var_Bleeding_blood", 0];
-call X39_ActionUI_fnc_closeDialog;
+[] call X39_XLib_fnc_ActionDialog_closeDialog;
 if(items player find ITEMSTRING < 0 && items _unit find ITEMSTRING < 0) exitWith{[localize "STR_X39_MedSys_var__msg_NoBloodBagLeft"] call X39_MedSys_fnc_OutputMessageToPlayer;};
 player playActionNow (_animationIndex call X39_MedSys_fnc_getMedicAnimation);
-X39_MedSys_var_PreventGuiOpening = true;
+X39_XLib_var_ActionDialog_preventMenuOpening = true;
 sleep X39_MedSys_var_actionTimeout_BloodUnit;
-X39_MedSys_var_PreventGuiOpening = false;
+X39_XLib_var_ActionDialog_preventMenuOpening = false;
 player playAction "medicStop";
 _blood = _blood + X39_MedSys_var_BloodPackValue;
 if(_blood > X39_MedSys_var_Bleeding_StartingBlood) then

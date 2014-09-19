@@ -107,6 +107,8 @@ assignVariable_STR("X39_MedSys_var_ppEffects_Blur", -1)
 assignVariable_STR("X39_MedSys_var_ppEffects_ColorInversion", -1)
 assignVariable_STR("X39_MedSys_var_ppEffects_ChromAberration", -1)
 
+assignVariable_STR("X39_MedSys_var_Running", false)
+
 
 //AllowedToEdit Variables
 assignVariable_STR("X39_MedSys_var_UsingEventSystem", false)
@@ -126,7 +128,7 @@ assignVariable_STR("X39_MedSys_var_Action_CheckUnit_OutputRealValues", false)
 assignVariable_STR("X39_MedSys_var_Bleeding_StartBloodAtMinDamageValueX", 0.25)
 assignVariable_STR("X39_MedSys_var_Bleeding_KnockOutBloodLimit", X39_MedSys_var_Bleeding_StartingBlood * 0.2)
 assignVariable_STR("X39_MedSys_var_LifeTime", 600)
-assignVariable_STR("X39_MedSys_var_PreventGuiOpening", false)
+assignVariable_STR("X39_XLib_var_ActionDialog_preventMenuOpening", false)
 assignVariable_STR("X39_MedSys_var_StartCRP", false)
 
 
@@ -246,4 +248,42 @@ _res = [] spawn {
 		[] call X39_MedSys_fnc_applyServerConfig;
 	};
 };
-X39_MedSys_var_VERSION = "0.3.7";
+X39_MedSys_var_VERSION = "0.3.8 BETA";
+
+#define GETALLOWID(X) (call{\
+	if(!X39_MedSys_var_Limitations_enable) exitWith { return 0 };\
+	return [X, player] call X39_MedSys_fnc_isAllowedToUse;\
+})
+#define ISALLOWEDTOUSE(X) (call {\
+	_allowID = GETALLOWID(X);\
+	if(_allowID < 0) exitWith {return false};\
+	return true\
+})
+
+
+[localize "STR_X39_MedSys_var__Option_CheckOther",			"", {private["_allowID"]; _res = [0, X39_XLib_var_ActionDialog_Target] spawn X39_MedSys_fnc_checkUnitStatus},									{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Target getVariable ["X39_MedSys_var_UnitInitilized", false]) && {!X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}}, -1] call X39_XLib_fnc_ActionDialog_registerAction;
+[localize "STR_X39_MedSys_var__Interaction_Drag",			"", {private["_allowID"]; _res = [0, X39_XLib_var_ActionDialog_Target] spawn X39_MedSys_fnc_DragUnit},											{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Target getVariable ["X39_MedSys_var_UnitInitilized", false]) && X39_MedSys_var_enableDrag && {!X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}}, -1] call X39_XLib_fnc_ActionDialog_registerAction;
+[localize "STR_X39_MedSys_var__Interaction_Carry",			"", {private["_allowID"]; _res = [0, X39_XLib_var_ActionDialog_Target] spawn X39_MedSys_fnc_CarryUnit},											{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Target getVariable ["X39_MedSys_var_UnitInitilized", false]) && X39_MedSys_var_enableCarry && {!X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}}, -1] call X39_XLib_fnc_ActionDialog_registerAction;
+[localize "STR_X39_MedSys_var__Option_Bandage",				"", {private["_allowID"]; _res = [0, X39_XLib_var_ActionDialog_Target, ISALLOWEDTOUSE(BANDAGE)] spawn X39_MedSys_fnc_BandageUnit},				{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Target getVariable ["X39_MedSys_var_UnitInitilized", false]) && ISALLOWEDTOUSE(BANDAGE) && {!X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}}, -1] call X39_XLib_fnc_ActionDialog_registerAction;
+[localize "STR_X39_MedSys_var__Option_PutTourniquet",		"", {private["_allowID"]; _res = [0, X39_XLib_var_ActionDialog_Target, ISALLOWEDTOUSE(TOURNIQUET)] spawn X39_MedSys_fnc_putTourniquet},			{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Target getVariable ["X39_MedSys_var_UnitInitilized", false]) && ISALLOWEDTOUSE(TOURNIQUET) && !(X39_XLib_var_ActionDialog_Target getVariable ["X39_MedSys_var_Bleeding_hasTourniquet", false]) && {!X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}}, -1] call X39_XLib_fnc_ActionDialog_registerAction;
+[localize "STR_X39_MedSys_var__Option_RemoveTourniquet",	"", {private["_allowID"]; _res = [0, X39_XLib_var_ActionDialog_Target, ISALLOWEDTOUSE(TOURNIQUET)] spawn X39_MedSys_fnc_putTourniquet},			{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Target getVariable ["X39_MedSys_var_UnitInitilized", false]) && ISALLOWEDTOUSE(TOURNIQUET) && (X39_XLib_var_ActionDialog_Target getVariable ["X39_MedSys_var_Bleeding_hasTourniquet", false]) && {!X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}}, -1] call X39_XLib_fnc_ActionDialog_registerAction;
+[localize "STR_X39_MedSys_var__Option_Blood",				"", {private["_allowID"]; _res = [0, X39_XLib_var_ActionDialog_Target, ISALLOWEDTOUSE(BLOOD)] spawn X39_MedSys_fnc_BloodUnit},					{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Target getVariable ["X39_MedSys_var_UnitInitilized", false]) && ISALLOWEDTOUSE(BLOOD) && {!X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}}, -1] call X39_XLib_fnc_ActionDialog_registerAction;
+[localize "STR_X39_MedSys_var__Option_Morphine",			"", {private["_allowID"]; _res = [0, X39_XLib_var_ActionDialog_Target, ISALLOWEDTOUSE(MORPHINE)] spawn X39_MedSys_fnc_MorphineUnit},			{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Target getVariable ["X39_MedSys_var_UnitInitilized", false]) && ISALLOWEDTOUSE(MORPHINE) && {!X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}}, -1] call X39_XLib_fnc_ActionDialog_registerAction;
+[localize "STR_X39_MedSys_var__Option_Medikit",				"", {private["_allowID"]; _res = [0, X39_XLib_var_ActionDialog_Target, ISALLOWEDTOUSE(MEDKIT)] spawn X39_MedSys_fnc_UseMediKitOnUnit},			{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Target getVariable ["X39_MedSys_var_UnitInitilized", false]) && ISALLOWEDTOUSE(MEDKIT) && {!X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}}, -1] call X39_XLib_fnc_ActionDialog_registerAction;
+private["_index"];
+_index = [localize "STR_X39_MedSys_var__ReviveTopMenu",		"", "", {!X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}, -1] call X39_XLib_fnc_ActionDialog_registerAction;
+[localize "STR_X39_MedSys_var__Option_Epinephrine",			"", {private["_allowID"]; _res = [0, X39_XLib_var_ActionDialog_Target, ISALLOWEDTOUSE(EPINEPHRINE)] spawn X39_MedSys_fnc_EpinephrineUnit},		{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Target getVariable ["X39_MedSys_var_UnitInitilized", false]) && ISALLOWEDTOUSE(EPINEPHRINE) && {!X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}}, _index] call X39_XLib_fnc_ActionDialog_registerAction;
+[localize "STR_X39_MedSys_var__Option_Defibrillator",		"", {private["_allowID"]; _res = [0, X39_XLib_var_ActionDialog_Target, ISALLOWEDTOUSE(DEFIBRILLATE)] spawn X39_MedSys_fnc_defibrilatorUnit},	{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Target getVariable ["X39_MedSys_var_UnitInitilized", false]) && ISALLOWEDTOUSE(DEFIBRILLATE) && {!X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}}, _index] call X39_XLib_fnc_ActionDialog_registerAction;
+[localize "STR_X39_MedSys_var__Interaction_doCPR",			"", {private["_allowID"]; _res = [0, X39_XLib_var_ActionDialog_Target] spawn X39_MedSys_fnc_doCpr},												{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Target getVariable ["X39_MedSys_var_UnitInitilized", false]) && !X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}, _index] call X39_XLib_fnc_ActionDialog_registerAction;
+[localize "STR_X39_MedSys_var__Interaction_doStabilize", 	"", {private["_allowID"]; _res = [0, X39_XLib_var_ActionDialog_Target] spawn X39_MedSys_fnc_stabilize},											{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Target getVariable ["X39_MedSys_var_UnitInitilized", false]) && !X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}, _index] call X39_XLib_fnc_ActionDialog_registerAction;
+
+
+[localize "STR_X39_MedSys_var__Option_CheckSelf",			"", {private['_allowID']; _res = [0, X39_XLib_var_ActionDialog_Executor] spawn X39_MedSys_fnc_checkUnitStatus								},	{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Executor getVariable ["X39_MedSys_var_UnitInitilized", false]) && {X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}}, -1] call X39_XLib_fnc_ActionDialog_registerAction;
+[localize "STR_X39_MedSys_var__Option_Bandage",				"", {private['_allowID']; _res = [0, X39_XLib_var_ActionDialog_Executor, ISALLOWEDTOUSE(BANDAGE)] spawn X39_MedSys_fnc_BandageUnit			},	{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Executor getVariable ["X39_MedSys_var_UnitInitilized", false]) && ISALLOWEDTOUSE(BANDAGE) && {X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}}, -1] call X39_XLib_fnc_ActionDialog_registerAction;
+[localize "STR_X39_MedSys_var__Option_PutTourniquet",		"", {private['_allowID']; _res = [0, X39_XLib_var_ActionDialog_Executor, ISALLOWEDTOUSE(TOURNIQUET)] spawn X39_MedSys_fnc_putTourniquet		},	{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Executor getVariable ["X39_MedSys_var_UnitInitilized", false]) && ISALLOWEDTOUSE(TOURNIQUET) && !(X39_XLib_var_ActionDialog_Executor getVariable ["X39_MedSys_var_Bleeding_hasTourniquet", false]) && {X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}}, -1] call X39_XLib_fnc_ActionDialog_registerAction;
+[localize "STR_X39_MedSys_var__Option_RemoveTourniquet",	"", {private['_allowID']; _res = [0, X39_XLib_var_ActionDialog_Executor, ISALLOWEDTOUSE(TOURNIQUET)] spawn X39_MedSys_fnc_putTourniquet		},	{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Executor getVariable ["X39_MedSys_var_UnitInitilized", false]) && ISALLOWEDTOUSE(TOURNIQUET) && (X39_XLib_var_ActionDialog_Executor getVariable ["X39_MedSys_var_Bleeding_hasTourniquet", false]) && {X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}}, -1] call X39_XLib_fnc_ActionDialog_registerAction;
+[localize "STR_X39_MedSys_var__Option_Blood",				"", {private['_allowID']; _res = [0, X39_XLib_var_ActionDialog_Executor, ISALLOWEDTOUSE(BLOOD)] spawn X39_MedSys_fnc_BloodUnit				},	{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Executor getVariable ["X39_MedSys_var_UnitInitilized", false]) && ISALLOWEDTOUSE(BLOOD) && {X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}}, -1] call X39_XLib_fnc_ActionDialog_registerAction;
+[localize "STR_X39_MedSys_var__Option_Morphine",			"", {private['_allowID']; _res = [0, X39_XLib_var_ActionDialog_Executor, ISALLOWEDTOUSE(MORPHINE)] spawn X39_MedSys_fnc_MorphineUnit		},	{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Executor getVariable ["X39_MedSys_var_UnitInitilized", false]) && ISALLOWEDTOUSE(MORPHINE) && {X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}}, -1] call X39_XLib_fnc_ActionDialog_registerAction;
+[localize "STR_X39_MedSys_var__Option_PutEarplugs",			"", {private['_allowID']; _res = [0, X39_XLib_var_ActionDialog_Executor] spawn X39_MedSys_fnc_UseEarplugs									},	{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Executor getVariable ["X39_MedSys_var_UnitInitilized", false]) && !(X39_XLib_var_ActionDialog_Executor getVariable ["X39_MedSys_var_hasEarplugs", false]) && {X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}}, -1] call X39_XLib_fnc_ActionDialog_registerAction;
+[localize "STR_X39_MedSys_var__Option_RemoveEarplugs",		"", {private['_allowID']; _res = [0, X39_XLib_var_ActionDialog_Executor] spawn X39_MedSys_fnc_UseEarplugs									},	{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Executor getVariable ["X39_MedSys_var_UnitInitilized", false]) && (X39_XLib_var_ActionDialog_Executor getVariable ["X39_MedSys_var_hasEarplugs", false]) && {X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}}, -1] call X39_XLib_fnc_ActionDialog_registerAction;
+[localize "STR_X39_MedSys_var__Option_Medikit",				"", {private['_allowID']; _res = [0, X39_XLib_var_ActionDialog_Executor, ISALLOWEDTOUSE(MEDKIT)] spawn X39_MedSys_fnc_UseMediKitOnUnit		},	{X39_MedSys_var_Running && (X39_XLib_var_ActionDialog_Executor getVariable ["X39_MedSys_var_UnitInitilized", false]) && ISALLOWEDTOUSE(MEDKIT) && {X39_XLib_var_ActionDialog_IsSelf && !X39_XLib_var_ActionDialog_ExecutorInVehicle}}, -1] call X39_XLib_fnc_ActionDialog_registerAction;

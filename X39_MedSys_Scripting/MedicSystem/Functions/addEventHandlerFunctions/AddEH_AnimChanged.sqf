@@ -37,7 +37,7 @@ _this addEventHandler["AnimChanged",
 		if (X39_MedSys_var_StartCRP) then {
 			X39_MedSys_var_StartCRP = false;
 		} else {
-			X39_MedSys_var_PreventGuiOpening = false;
+			X39_XLib_var_ActionDialog_preventMenuOpening = false;
 			_otherUnitCpr setVariable["X39_MedSys_var_LifeTime_stop", false, true];
 			_unit playAction "medicStop";
 			if(isPlayer _unit) then

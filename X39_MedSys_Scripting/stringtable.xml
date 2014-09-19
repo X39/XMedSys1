@@ -51,8 +51,8 @@
 				<Spanish>Ver Estado</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__Option_CheckOther">
-				<English>Check</English>
-				<German>Überprüfen:</German>
+				<English>Check Target</English>
+				<German>Einheit untersuchen</German>
 				<Hungarian>Vizsgálat</Hungarian>
 				<Italian>Diagnosi</Italian>
 				<French>Checker</French>

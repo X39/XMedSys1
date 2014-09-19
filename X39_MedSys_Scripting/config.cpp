@@ -3,7 +3,7 @@ class CfgPatches{
          units[] = {"X39_MedSys_Module_BasicModule", "X39_MedSys_Module_EnableLimitationsSystemModule", "X39_MedSys_Module_AddLimitationModule"};
          weapons[] = {};
          requiredVersion = 1.0;
-         requiredAddons[] = {"X39_MedSys_Settings", "X39_XLib_Core", "X39_XLib_ScriptObjectCreation", "X39_MedSys_UIs", "X39_ActionUi_Scripting", "X39_XLib_EventSystem"};
+         requiredAddons[] = {"X39_MedSys_Settings", "X39_XLib_Core", "X39_XLib_ScriptObjectCreation", "X39_MedSys_UIs", "X39_XLib_EventSystem"};
          author = "X39|Cpt. HM Murdock";
          mail = "killerx29@gmail.com";
 	};

@@ -14,7 +14,7 @@ _animationIndex = [_this, 0, 0, [0]] call BIS_fnc_param;
 _unit = [_this, 1, cursorTarget, [objNull]] call BIS_fnc_param;
 _allowedID = [_this, 2, -1, [0]] call BIS_fnc_param;
 
-call X39_ActionUI_fnc_closeDialog;
+[] call X39_XLib_fnc_ActionDialog_closeDialog;
 _item = false;
 if(items player find ITEMSTRING(4) >= 0 || items _unit find ITEMSTRING(4) >= 0)  then { _item = ITEMSTRING(4) } else { 
 	if(items player find ITEMSTRING(3) >= 0 || items _unit find ITEMSTRING(3) >= 0)  then { _item = ITEMSTRING(3) } else { 
@@ -27,9 +27,9 @@ if(items player find ITEMSTRING(4) >= 0 || items _unit find ITEMSTRING(4) >= 0) 
 };
 if(typeName _item == "BOOL") exitWith{[localize "STR_X39_MedSys_var__msg_NoMediKitLeft"] call X39_MedSys_fnc_OutputMessageToPlayer;};
 player playActionNow (_animationIndex call X39_MedSys_fnc_getMedicAnimation);
-X39_MedSys_var_PreventGuiOpening = true;
+X39_XLib_var_ActionDialog_preventMenuOpening = true;
 sleep X39_MedSys_var_actionTimeout_UseMedkitOnUnit;
-X39_MedSys_var_PreventGuiOpening = false;
+X39_XLib_var_ActionDialog_preventMenuOpening = false;
 player playAction "medicStop";
 if(X39_MedSys_var_Limitations_allowHealingLegsInField && _allowedID != ALLOWED_LIMITED) then
 {

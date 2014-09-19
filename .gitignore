@@ -1,6 +1,7 @@
 # ArmA related files
 *.pbo
 *.bisign
+*.bin
 
 # log files
 *.log
@@ -14,6 +15,17 @@
 *.ps
 *.ps
 *.pdn
+*.xcf
 *.3ds
-/X39_MedSys_Ressources/texHeaders.bin
-/X39_MedSys_Stretcher/texHeaders.bin
+
+# specific files
+buildScript.cmd
+
+# office files
+*.ignore.xlsx
+
+# local sourcefile backups
+.backup
+.old
+
+*.ignore.*

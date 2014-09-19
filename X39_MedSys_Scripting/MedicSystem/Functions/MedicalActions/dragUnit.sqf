@@ -43,4 +43,4 @@ player setVariable["X39_MedSys_var_DragCarry_Action",
 		player setVariable["X39_MedSys_var_DragCarry_Action", -1, false];
 		player setVariable["X39_MedSys_var_DragCarry_OtherUnit", objNull, false];
 	}, _unit, 6, false, true], false];
-call X39_ActionUI_fnc_closeDialog;
+[] call X39_XLib_fnc_ActionDialog_closeDialog

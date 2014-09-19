@@ -13,7 +13,7 @@ private["_animationIndex", "_unit", "_currentPain", "_newPain", "_allowedID"];
 _animationIndex = [_this, 0, 0, [0]] call BIS_fnc_param;
 _unit = [_this, 1, cursorTarget, [objNull]] call BIS_fnc_param;
 _hasEarplugs = _unit getVariable ["X39_MedSys_var_hasEarplugs", false];
-call X39_ActionUI_fnc_closeDialog;
+[] call X39_XLib_fnc_ActionDialog_closeDialog;
 
 //x39_earplug
 if(items _unit find ITEMSTRING < 0 && !_hasEarplugs) exitWith{[localize "STR_X39_MedSys_var__msg_NoEarplugs"] call X39_MedSys_fnc_OutputMessageToPlayer;};

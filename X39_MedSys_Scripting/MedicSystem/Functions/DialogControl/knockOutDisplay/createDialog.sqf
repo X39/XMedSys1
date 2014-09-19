@@ -9,7 +9,7 @@
 DEBUG_LOG("Trying to create a dialog")
 if!(X39_MedSys_var_Display_BlackOut_Open) then
 {
-	if(dialog) then {[] call X39_ActionUI_fnc_closeDialog;};
+	if(dialog) then {[] call X39_XLib_fnc_ActionDialog_closeDialog};
 	X39_MedSys_var_Display_BlackOut_Open = true;
 	//TFAR Related:
 	//Is player can press tangent on radio [default value = false]:

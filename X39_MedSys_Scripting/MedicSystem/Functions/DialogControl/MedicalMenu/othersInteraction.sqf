@@ -20,8 +20,8 @@
  */
 private["_otherUnit", "_tourniquetString", "_actions", "_allowID"];
 if !(alive player) exitWith {};
-if(dialog) exitWith{ call X39_ActionUI_fnc_closeDialog; };
-if((player == vehicle player) && !(player call X39_MedSys_fnc_isUnitKnockedOut) && !X39_MedSys_var_PreventGuiOpening) then {
+if(dialog) exitWith{ [] call X39_XLib_fnc_ActionDialog_closeDialog };
+if((player == vehicle player) && !(player call X39_MedSys_fnc_isUnitKnockedOut) && !X39_XLib_var_ActionDialog_preventMenuOpening) then {
 	_otherUnit = cursorTarget;
 	if(_otherUnit getVariable ["X39_MedSys_var_UnitInitilized", false] && player distance _otherUnit < 4) then
 	{
@@ -114,7 +114,7 @@ if((player == vehicle player) && !(player call X39_MedSys_fnc_isUnitKnockedOut) 
 						_pullActions set[count _pullActions, [
 							0,
 							format["%1 %2 %3", localize "STR_X39_MedSys_var__VehiclePut_Put", name _x, localize "STR_X39_MedSys_var__VehiclePut_IntoVehicle"],
-							format["_res = [] spawn{[[(X39_MedSys_var_MedicalMenu_PullUnitFromVehicle_TempObjectsPlaceholder select %1), cursorTarget], ""X39_MedSys_fnc_putUnitIntoVehicle"", (X39_MedSys_var_MedicalMenu_PullUnitFromVehicle_TempObjectsPlaceholder select %1), false] call BIS_fnc_MP; cursorTarget call X39_MedSys_fnc_MM_putUnitIntoVehicle}; call X39_ActionUI_fnc_closeDialog;", _forEachIndex]
+							format["_res = [] spawn{[[(X39_MedSys_var_MedicalMenu_PullUnitFromVehicle_TempObjectsPlaceholder select %1), cursorTarget], ""X39_MedSys_fnc_putUnitIntoVehicle"", (X39_MedSys_var_MedicalMenu_PullUnitFromVehicle_TempObjectsPlaceholder select %1), false] call BIS_fnc_MP; cursorTarget call X39_MedSys_fnc_MM_putUnitIntoVehicle}; [] call X39_XLib_fnc_ActionDialog_closeDialog", _forEachIndex]
 						]];
 					};
 				};
@@ -130,13 +130,13 @@ if((player == vehicle player) && !(player call X39_MedSys_fnc_isUnitKnockedOut) 
 						_putActions set[count _putActions, [
 							0,
 							format["%1 %2 %3", localize "STR_X39_MedSys_var__VehiclePull_Pull", name _x, localize "STR_X39_MedSys_var__VehiclePull_OutOfVehicle"],
-							format["_res = [] spawn{[(X39_MedSys_var_MedicalMenu_PutUnitIntoVehicle_TempObjectsPlaceholder select %1),""X39_MedSys_fnc_pullUnitOutOfVehicle"", (X39_MedSys_var_MedicalMenu_PutUnitIntoVehicle_TempObjectsPlaceholder select %1), false] call BIS_fnc_MP; cursorTarget call X39_MedSys_fnc_MM_dropUnitFromVehicle}; call X39_ActionUI_fnc_closeDialog;", _forEachIndex]
+							format["_res = [] spawn{[(X39_MedSys_var_MedicalMenu_PutUnitIntoVehicle_TempObjectsPlaceholder select %1),""X39_MedSys_fnc_pullUnitOutOfVehicle"", (X39_MedSys_var_MedicalMenu_PutUnitIntoVehicle_TempObjectsPlaceholder select %1), false] call BIS_fnc_MP; cursorTarget call X39_MedSys_fnc_MM_dropUnitFromVehicle}; [] call X39_XLib_fnc_ActionDialog_closeDialog", _forEachIndex]
 						]];
 					};
 				};
 			}forEach X39_MedSys_var_MedicalMenu_PutUnitIntoVehicle_TempObjectsPlaceholder;
 			//finally create the UI
-			_actions = [[0, localize "STR_X39_MedSys_var__Option_CloseUI", "call X39_ActionUI_fnc_closeDialog;"]];
+			_actions = [[0, localize "STR_X39_MedSys_var__Option_CloseUI", "[] call X39_XLib_fnc_ActionDialog_closeDialog"]];
 			if(count _putActions > 1) then
 			{
 				_actions set [count _actions, [3, format["%1 %2", localize "STR_X39_MedSys_var__VehiclePull_Pull", localize "STR_X39_MedSys_var__VehiclePull_OutOfVehicle"], "", {}, _putActions]];

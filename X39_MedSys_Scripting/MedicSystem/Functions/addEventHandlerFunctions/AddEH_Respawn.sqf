@@ -31,6 +31,6 @@ _this addEventHandler["Respawn",
 		};
 		_unit setCaptive false;
 		call X39_MedSys_fnc_closeBlackOutDisplay;
-		X39_MedSys_var_PreventGuiOpening = false;
+		X39_XLib_var_ActionDialog_preventMenuOpening = false;
 	}
 }];
