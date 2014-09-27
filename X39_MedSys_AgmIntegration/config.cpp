@@ -173,7 +173,7 @@ class CfgVehicles
 				{
 					displayName = "$STR_X39_MedSys_var__Option_Bandage";
 					condition = "X39_MedSys_var_Running && ('BANDAGE' call {	_allowID = (_this call{		if(!X39_MedSys_var_Limitations_enable) exitWith {  0 };		 [_this, player] call X39_MedSys_fnc_isAllowedToUse;	});	if(_allowID < 0) exitWith { false};	 true}) && {vehicle player == player}";
-					statement = "private['_allowID']; _res = [0, cursorTarget, ('BANDAGE' call {	_allowID = (_this call{		if(!X39_MedSys_var_Limitations_enable) exitWith {  0 };		 [_this, player] call X39_MedSys_fnc_isAllowedToUse;	});	if(_allowID < 0) exitWith { false};	 true})] spawn X39_MedSys_fnc_BandageUnit";
+					statement = "private['_allowID']; _res = [0, player, ('BANDAGE' call {	_allowID = (_this call{		if(!X39_MedSys_var_Limitations_enable) exitWith {  0 };		 [_this, player] call X39_MedSys_fnc_isAllowedToUse;	});	if(_allowID < 0) exitWith { false};	 true})] spawn X39_MedSys_fnc_BandageUnit";
 					priority = 1;
 					showDisabled = 1;
 					icon = "X39_MedSys_Ressources\X39\Mods\MedSys\logo.paa";
