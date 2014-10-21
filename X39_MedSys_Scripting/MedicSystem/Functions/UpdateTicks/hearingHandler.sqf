@@ -18,7 +18,7 @@ _hearingCALC = (1 - _hearing) ^ 4;
 0.1 fadeRadio _hearingCALC;
 //TFAR related variable:
 //Global volume of radio and voice (level of ears health  ) [default value = 1.0]
-_this setVariable ["tf_globalVolume", _hearingCALC];
+_this setVariable ["tf_globalVolume", _hearingCALC, true];
 if(((profileNamespace getVariable["X39_MedSys_var_Settings_playEarRingingSound", X39_MedSys_var_Settings_playEarRingingSound]) call X39_MedSys_fnc_IntToBoolean) && {_hearing > 0.5}) then
 {
 	playSound ["X39_Sounds_earRingingSoundLoop_1s", true];

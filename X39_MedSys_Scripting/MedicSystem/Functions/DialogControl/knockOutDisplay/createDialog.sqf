@@ -13,10 +13,10 @@ if!(X39_MedSys_var_Display_BlackOut_Open) then
 	X39_MedSys_var_Display_BlackOut_Open = true;
 	//TFAR Related:
 	//Is player can press tangent on radio [default value = false]:
-	player setVariable ["tf_unable_to_use_radio", true];
+	player setVariable ["tf_unable_to_use_radio", true, true];
 	//Set voice volume level for player (not affect distance where voice is hearable) [default value - 1]:
-	player setVariable["X39_MedSys_var_tfar_voiceVolumeValueBefore", player getVariable "tf_voiceVolume"];
-	player setVariable ["tf_voiceVolume", 0];
+	player setVariable["X39_MedSys_var_tfar_voiceVolumeValueBefore", player getVariable "tf_voiceVolume", true];
+	player setVariable ["tf_voiceVolume", 0, true];
 	_res = [_this] spawn {
 		private["_time", "_fadeIn", "_fadeOut", "_res"];
 		_time = _this select 0;

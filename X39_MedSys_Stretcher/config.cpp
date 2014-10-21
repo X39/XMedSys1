@@ -14,11 +14,11 @@ class CfgVehicles
 {
 
 	class NonStrategic;
-	class X39_MedSys_var_Stretcher: NonStrategic
+	class X39_MedSys_Stretcher: NonStrategic
 	{
 		mapSize = 1.46;
 		author = "Nicomach";
-		icon = "\X39_MedSys_var_Stretcher\data\stretcher_ico.paa";
+		icon = "\X39_MedSys_Stretcher\data\stretcher_ico.paa";
 		_generalMacro = "kay_stretcher";
 		scope = 2;
 		displayName = "kay_stretcher";
@@ -26,6 +26,6 @@ class CfgVehicles
 		destrType = "DestructNo";
 		accuracy = 0.3;
 		armor = 100;
-		model = "\X39_MedSys_var_Stretcher\stretcher.p3d";
+		model = "\X39_MedSys_Stretcher\stretcher.p3d";
 	};
 };
