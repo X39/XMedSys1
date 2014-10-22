@@ -61,45 +61,25 @@
 				<Spanish>Combrobar</Spanish>
 			</Key>
 			
-			<Key ID="STR_X39_MedSys_var__VehiclePull_Pull">
-				<English>Remove</English>
-				<German>Entferne</German>
-				<Hungarian>Eltávolítás</Hungarian>
-				<Italian>Togli</Italian>
-				<French>Sortir</French>
-				<Russian>Достать</Russian>
-				<Polish>Wyciągnij</Polish>
-				<Spanish>Quitar</Spanish>
+			<Key ID="STR_X39_MedSys_var__VehiclePullOutOfVehicle">
+				<English>Remove all from vehicle</English>
+				<German>Remove all from vehicle</German>
+				<Hungarian>Remove all from vehicle</Hungarian>
+				<Italian>Remove all from vehicle</Italian>
+				<French>Remove all from vehicle</French>
+				<Russian>Remove all from vehicle</Russian>
+				<Polish>Remove all from vehicle</Polish>
+				<Spanish>Remove all from vehicle</Spanish>
 			</Key>
-			<Key ID="STR_X39_MedSys_var__VehiclePull_OutOfVehicle">
-				<English>from vehicle</English>
-				<German>aus Fahrzeug</German>
-				<Hungarian>a járműből</Hungarian>
-				<Italian>dal veicolo</Italian>
-				<French>de ce vehicule</French>
-				<Russian>из техники</Russian>
-				<Polish>z pojazdu</Polish>
-				 <Spanish>de vehiculo</Spanish>
-			</Key>
-			<Key ID="STR_X39_MedSys_var__VehiclePut_Put">
-				<English>Put</English>
-				<German>Lege</German>
-				<Hungarian>Berakás</Hungarian>
-				<Italian>Metti</Italian>
-				<French>Mettre</French>
-				<Russian>Положить</Russian>
-				<Polish>Umieść</Polish>
-				<Spanish>Poner</Spanish>
-			</Key>
-			<Key ID="STR_X39_MedSys_var__VehiclePut_IntoVehicle">
-				<English>into vehicle</English>
-				<German>ins Fahrzeug</German>
-				<Hungarian>a járműbe</Hungarian>
-				<Italian>nel veicolo</Italian>
-				<French>dans ce vehicule</French>
-				<Russian>в технику</Russian>
-				<Polish>w pojeździe</Polish>
-				<Spanish>en el vehiculo</Spanish>
+			<Key ID="STR_X39_MedSys_var__VehiclePutIntoVehicle">
+				<English>Put into vehicle</English>
+				<German>Lege ins Fahrzeug</German>
+				<Hungarian>Berakás a járműbe</Hungarian>
+				<Italian>Metti nel veicolo</Italian>
+				<French>Mettre dans ce vehicule</French>
+				<Russian>Положить в технику</Russian>
+				<Polish>Umieść w pojeździe</Polish>
+				<Spanish>Poner en el vehiculo</Spanish>
 			</Key>
 			<Key ID="STR_X39_MedSys_var__VehiclePut_NoVehicleInRange">
 				<English>There is no vehicle in range.</English>

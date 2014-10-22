@@ -123,6 +123,8 @@ class CfgFunctions
 			class doCpr:X39_XLib_Function_TypeA								{file = "\X39_MedSys_Scripting\MedicSystem\Functions\MedicalActions\doCpr.sqf";};
 			class UseEarplugs:X39_XLib_Function_TypeA						{file = "\X39_MedSys_Scripting\MedicSystem\Functions\MedicalActions\UseEarplugs.sqf";};
 			class stabilize:X39_XLib_Function_TypeA							{file = "\X39_MedSys_Scripting\MedicSystem\Functions\MedicalActions\stabilize.sqf";};
+			class moveInVehicle:X39_XLib_Function_TypeA						{file = "\X39_MedSys_Scripting\MedicSystem\Functions\MedicalActions\moveInVehicle.sqf";};
+			class removeAllFromVehicle:X39_XLib_Function_TypeA				{file = "\X39_MedSys_Scripting\MedicSystem\Functions\MedicalActions\removeAllFromVehicle.sqf";};
 		};
 		class MedicalActions_Messages
 		{
