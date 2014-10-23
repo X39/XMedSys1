@@ -262,7 +262,7 @@ class CfgVehicles
 				class XMedSys_RemoveAllFromVehicle
 				{
 					displayName = "$STR_X39_MedSys_var__VehiclePullOutOfVehicle";
-					condition = '(({cursorTarget isKindOf _x} count ["LandVehicle", "Air", "Ship"]) > 0) && X39_MedSys_var_Running && (cursorTarget getVariable ["X39_MedSys_var_UnitInitilized", false]) && (vehicle player == player)';
+					condition = "(({cursorTarget isKindOf _x} count ['LandVehicle', 'Air', 'Ship']) > 0) && X39_MedSys_var_Running && (cursorTarget getVariable ['X39_MedSys_var_UnitInitilized', false]) && (vehicle player == player)";
 					statement = "[0, cursorTarget, -1] call X39_MedSys_fnc_removeAllFromVehicle";
 					priority = 1;
 					showDisabled = 1;
@@ -289,7 +289,7 @@ class CfgVehicles
 				class XMedSys_RemoveAllFromVehicle
 				{
 					displayName = "$STR_X39_MedSys_var__VehiclePullOutOfVehicle";
-					condition = '(({cursorTarget isKindOf _x} count ["LandVehicle", "Air", "Ship"]) > 0) && X39_MedSys_var_Running && (cursorTarget getVariable ["X39_MedSys_var_UnitInitilized", false]) && (vehicle player == player)';
+					condition = "(({cursorTarget isKindOf _x} count ['LandVehicle', 'Air', 'Ship']) > 0) && X39_MedSys_var_Running && (cursorTarget getVariable ['X39_MedSys_var_UnitInitilized', false]) && (vehicle player == player)";
 					statement = "[0, cursorTarget, -1] call X39_MedSys_fnc_removeAllFromVehicle";
 					priority = 1;
 					showDisabled = 1;
@@ -316,7 +316,7 @@ class CfgVehicles
 				class XMedSys_RemoveAllFromVehicle
 				{
 					displayName = "$STR_X39_MedSys_var__VehiclePullOutOfVehicle";
-					condition = '(({cursorTarget isKindOf _x} count ["LandVehicle", "Air", "Ship"]) > 0) && X39_MedSys_var_Running && (cursorTarget getVariable ["X39_MedSys_var_UnitInitilized", false]) && (vehicle player == player)';
+					condition = "(({cursorTarget isKindOf _x} count ['LandVehicle', 'Air', 'Ship']) > 0) && X39_MedSys_var_Running && (cursorTarget getVariable ['X39_MedSys_var_UnitInitilized', false]) && (vehicle player == player)";
 					statement = "[0, cursorTarget, -1] call X39_MedSys_fnc_removeAllFromVehicle";
 					priority = 1;
 					showDisabled = 1;
