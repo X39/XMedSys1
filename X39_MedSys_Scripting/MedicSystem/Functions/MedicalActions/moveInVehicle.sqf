@@ -12,7 +12,7 @@ _unit = [_this, 1, cursorTarget, [objNull]] call BIS_fnc_param;
 _allowedID = [_this, 2, -1, [0]] call BIS_fnc_param;
 
 [] call X39_XLib_fnc_ActionDialog_closeDialog;
-_veh = nearestObjects[_unit, ["land", "air", "boat"], 10];
+_veh = nearestObjects[_unit, ["LandVehicle", "Air", "Ship"], 10];
 if(count _veh == 0) exitWith {[localize "STR_X39_MedSys_var__VehiclePut_NoVehicleInRange"] call X39_MedSys_fnc_OutputMessageToPlayer;};
 _veh = _veh select 0;
 _unit moveInCargo _veh;

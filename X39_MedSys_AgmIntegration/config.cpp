@@ -244,4 +244,85 @@ class CfgVehicles
 			};
 		};
 	};
+	class LandVehicle
+	{
+		class AGM_Actions
+		{
+			class XMedSys_MedicalOther
+			{
+				displayName = "Medical Treatment >>";
+				distance = 4;
+				condition = "(vehicle player == player) && (cursorTarget getVariable ['X39_MedSys_var_UnitInitilized', false])";
+				statement = "'XMedSys_MedicalOther' call AGM_Interaction_fnc_openMenu;";
+				showDisabled = 1;
+				icon = "X39_MedSys_Ressources\X39\Mods\MedSys\logo.paa";
+				priority = 6;
+				subMenu[] = {"XMedSys_MedicalOther", 0};
+			
+				class XMedSys_RemoveAllFromVehicle
+				{
+					displayName = "$STR_X39_MedSys_var__VehiclePullOutOfVehicle";
+					condition = '(({cursorTarget isKindOf _x} count ["LandVehicle", "Air", "Ship"]) > 0) && X39_MedSys_var_Running && (cursorTarget getVariable ["X39_MedSys_var_UnitInitilized", false]) && (vehicle player == player)';
+					statement = "[0, cursorTarget, -1] call X39_MedSys_fnc_removeAllFromVehicle";
+					priority = 1;
+					showDisabled = 1;
+					icon = "X39_MedSys_Ressources\X39\Mods\MedSys\logo.paa";
+				};
+			};
+		};
+	};
+	class Air
+	{
+		class AGM_Actions
+		{
+			class XMedSys_MedicalOther
+			{
+				displayName = "Medical Treatment >>";
+				distance = 4;
+				condition = "(vehicle player == player) && (cursorTarget getVariable ['X39_MedSys_var_UnitInitilized', false])";
+				statement = "'XMedSys_MedicalOther' call AGM_Interaction_fnc_openMenu;";
+				showDisabled = 1;
+				icon = "X39_MedSys_Ressources\X39\Mods\MedSys\logo.paa";
+				priority = 6;
+				subMenu[] = {"XMedSys_MedicalOther", 0};
+			
+				class XMedSys_RemoveAllFromVehicle
+				{
+					displayName = "$STR_X39_MedSys_var__VehiclePullOutOfVehicle";
+					condition = '(({cursorTarget isKindOf _x} count ["LandVehicle", "Air", "Ship"]) > 0) && X39_MedSys_var_Running && (cursorTarget getVariable ["X39_MedSys_var_UnitInitilized", false]) && (vehicle player == player)';
+					statement = "[0, cursorTarget, -1] call X39_MedSys_fnc_removeAllFromVehicle";
+					priority = 1;
+					showDisabled = 1;
+					icon = "X39_MedSys_Ressources\X39\Mods\MedSys\logo.paa";
+				};
+			};
+		};
+	};
+	class Ship
+	{
+		class AGM_Actions
+		{
+			class XMedSys_MedicalOther
+			{
+				displayName = "Medical Treatment >>";
+				distance = 4;
+				condition = "(vehicle player == player) && (cursorTarget getVariable ['X39_MedSys_var_UnitInitilized', false])";
+				statement = "'XMedSys_MedicalOther' call AGM_Interaction_fnc_openMenu;";
+				showDisabled = 1;
+				icon = "X39_MedSys_Ressources\X39\Mods\MedSys\logo.paa";
+				priority = 6;
+				subMenu[] = {"XMedSys_MedicalOther", 0};
+			
+				class XMedSys_RemoveAllFromVehicle
+				{
+					displayName = "$STR_X39_MedSys_var__VehiclePullOutOfVehicle";
+					condition = '(({cursorTarget isKindOf _x} count ["LandVehicle", "Air", "Ship"]) > 0) && X39_MedSys_var_Running && (cursorTarget getVariable ["X39_MedSys_var_UnitInitilized", false]) && (vehicle player == player)';
+					statement = "[0, cursorTarget, -1] call X39_MedSys_fnc_removeAllFromVehicle";
+					priority = 1;
+					showDisabled = 1;
+					icon = "X39_MedSys_Ressources\X39\Mods\MedSys\logo.paa";
+				};
+			};
+		};
+	};
 };
