@@ -68,8 +68,10 @@ else
 		//};
 		//_unit allowDamage false;
 		_unit setCaptive true;
-		
-		_unit playActionNow _actionToUse;
+		if(_unit == vehicle _unit) then
+		{
+			_unit playActionNow _actionToUse;
+		};
 		_unit setVariable["X39_MedSys_var_UnitKnockedOut", true, true];
 		if(_isUnitPlayer) then
 		{
